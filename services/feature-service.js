@@ -24,8 +24,18 @@ export class FeatureService {
       componentInstance.shadowRoot.querySelector("product-carousel");
 
     if (carousel) {
-      const featured = products.slice(0, 5); // lógica común
+      const featured = products.slice(0, 5);
       carousel.setProducts(featured);
+
+      const titleKey = this.getCarouselTitleKey(componentName);
+      if (titleKey && typeof carousel.setTitleKey === "function") {
+        carousel.setTitleKey(titleKey);
+      }
     }
+  }
+
+  static getCarouselTitleKey(componentName) {
+    const key = componentName.charAt(0).toLowerCase() + componentName.slice(1);
+    return storeConfig?.features?.productCarousel?.titles?.[key] || null;
   }
 }

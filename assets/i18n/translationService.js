@@ -22,7 +22,7 @@ const TranslationService = (() => {
     }
   };
 
-  const t = (key) => translations[key] || key;
+  const translate = (key) => translations[key] || key;
 
   const translatePage = (root = document) => {
     translateElementTree(root);
@@ -55,7 +55,7 @@ const TranslationService = (() => {
   return {
     loadTranslations,
     translatePage,
-    t,
+    translate,
     changeLanguage,
     getCurrentLang: () => currentLang,
   };

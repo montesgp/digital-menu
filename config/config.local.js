@@ -27,8 +27,13 @@ export const storeConfig = {
     },
   },
 
+  // Features
   features: {
     productCarousel: {
+      titles: {
+        dessertsService: "carousel.desserts.title",
+        fullService: "carousel.full_service.title",
+      },
       visibility: {
         dessertsService: true,
         fullService: true,

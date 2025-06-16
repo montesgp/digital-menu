@@ -31,8 +31,12 @@ export const storeConfig = {
   // Features
   features: {
     productCarousel: {
+      titles: {
+        dessertsService: "carousel.desserts.title",
+        fullService: "carousel.full_service.title",
+      },
       visibility: {
-        dessertsService: false,
+        dessertsService: true,
         fullService: true,
         drinksService: false,
         startersService: false,

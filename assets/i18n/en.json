@@ -7,5 +7,8 @@
     "service-menu.full_service": "Full Menu",
     "service-menu.full-service.title": "Full Menu",
     "header.navbar.home-btn": "Home",
-    "header.cover.home-btn": "Home"
-}  
+    "header.cover.home-btn": "Home",
+    "carousel.default.title": "Chef's Suggestions",
+    "carousel.desserts.title": "Recommended Desserts",
+    "carousel.full_service.title": "Chef's Suggestions"
+}

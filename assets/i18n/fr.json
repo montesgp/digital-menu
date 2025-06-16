@@ -7,5 +7,8 @@
     "service-menu.full_service": "Menu complet",
     "service-menu.full-service.title": "Menu complet",
     "header.navbar.home-btn": "Accueil",
-    "header.cover.home-btn": "#FRheader.cover.home-btn"
+    "header.cover.home-btn": "#FRheader.cover.home-btn",
+    "carousel.default.title": "#FRcarousel.default.title",
+    "carousel.desserts.title": "#FRcarousel.desserts.title",
+    "carousel.full_service.title": "#FRcarousel.full_service.title"
 }
