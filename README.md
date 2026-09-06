@@ -265,3 +265,9 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution workflow (br
 ## License
 
 This project is licensed under the [MIT License](LICENSE). Copyright (c) 2025 Patricio Montes.
+
+## Scan me
+
+![QR – live demo](assets/qr/business-card.png)
+
+Scan this code with your phone camera to open the live demo. Print it on tables, cards, and flyers for instant access.
