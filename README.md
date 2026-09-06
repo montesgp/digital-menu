@@ -120,7 +120,8 @@ digital-menu/
 ├── scripts/
 │   └── check-structure.mjs      Structure validator run in CI
 ├── docs/
-│   └── ARCHITECTURE.md          Architecture overview
+│   ├── ARCHITECTURE.md                    Architecture overview
+│   └── digital-menu-architecture-diagram.drawio  Editable architecture diagram
 ├── index.html                   App entry point
 ├── main.js                      Module entry point (loads components)
 ├── .github/                     Issue/PR templates, workflows
@@ -130,6 +131,8 @@ digital-menu/
 ## Architecture
 
 See [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md) for the full data-flow and component breakdown.
+
+> **Editable diagram:** [`docs/digital-menu-architecture-diagram.drawio`](docs/digital-menu-architecture-diagram.drawio) — draw.io source, renders inline on GitHub.
 
 ```mermaid
 flowchart LR
