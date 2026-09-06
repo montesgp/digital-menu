@@ -333,7 +333,7 @@
     {
       "name": "Café Espresso",
       "description": "Intenso café de tueste natural",
-      "service": "coffee",
+      "service": "drink",
       "category": "WithoutAlcohol",
       "categoryDescription": "With Out Alcohol",
       "subcategory": "vegan",
@@ -496,20 +496,6 @@
       "ingredients": "Chocolate negro, huevos, nata, azúcar, avellanas caramelizadas"
     },
     {
-      "name": "Ensalada César",
-      "description": "Lechuga romana, pollo a la parrilla, crutones, aderezo César y queso parmesano",
-      "service": "starter",
-      "category": "General",
-      "categoryDescription": "General",
-      "section": "Ensaladas",
-      "subSectionOne": "",
-      "subSectionTwo": "",
-      "sectionObservations": "",
-      "price": "16 USD",
-      "size": "",
-      "ingredients": "Lechuga romana, pollo, pan, queso parmesano, anchoas, ajo, mostaza, aceite de oliva"
-    },
-    {
       "name": "Hummus de Garbanzo",
       "description": "Puré de garbanzos con tahini, limón y ajo, servido con palitos de verduras",
       "service": "starter",
@@ -578,6 +564,81 @@
       "price": "11 USD",
       "size": "",
       "ingredients": "Tomates, pimiento, pepino, cebolla, ajo, aceite de oliva, vinagre"
+    },
+    {
+      "name": "Brownie con Helado",
+      "description": "Brownie de chocolate tibio con nueces, servido con helado de crema americana",
+      "service": "dessert",
+      "category": "Vegetarian",
+      "categoryDescription": "Vegetarian",
+      "subcategory": "",
+      "section": "Postres",
+      "subSectionOne": "Chocolates",
+      "subSectionTwo": "",
+      "sectionObservations": "",
+      "price": "11 USD",
+      "size": "",
+      "ingredients": "Chocolate, mantequilla, huevos, azúcar, nueces, helado de crema"
+    },
+    {
+      "name": "Flan Casero",
+      "description": "Flan de huevo con caramelo y crema batida",
+      "service": "dessert",
+      "category": "Vegetarian",
+      "categoryDescription": "Vegetarian",
+      "subcategory": "gluten-free",
+      "section": "Postres",
+      "subSectionOne": "Clásicos",
+      "subSectionTwo": "",
+      "sectionObservations": "",
+      "price": "8 USD",
+      "size": "",
+      "ingredients": "Huevos, leche, azúcar, caramelo, crema batida"
+    },
+    {
+      "name": "Tarta de Manzana",
+      "description": "Clásica tarta de manzana con canela y helado de vainilla",
+      "service": "dessert",
+      "category": "Vegetarian",
+      "categoryDescription": "Vegetarian",
+      "subcategory": "",
+      "section": "Postres",
+      "subSectionOne": "Tartas",
+      "subSectionTwo": "",
+      "sectionObservations": "",
+      "price": "11 USD",
+      "size": "Porción",
+      "ingredients": "Manzanas, harina, mantequilla, azúcar, canela, huevo, helado de vainilla"
+    },
+    {
+      "name": "Panna Cotta de Frutos Rojos",
+      "description": "Suave panna cotta con coulis de frutos rojos y menta fresca",
+      "service": "dessert",
+      "category": "Vegetarian",
+      "categoryDescription": "Vegetarian",
+      "subcategory": "gluten-free",
+      "section": "Postres",
+      "subSectionOne": "Cremas",
+      "subSectionTwo": "",
+      "sectionObservations": "",
+      "price": "9 USD",
+      "size": "",
+      "ingredients": "Crema, leche, azúcar, gelatina, frutos rojos, menta"
+    },
+    {
+      "name": "Helado Artesanal",
+      "description": "Tres bochas de helado artesanal del día a elección",
+      "service": "dessert",
+      "category": "Vegetarian",
+      "categoryDescription": "Vegetarian",
+      "subcategory": "vegan",
+      "section": "Postres",
+      "subSectionOne": "Helados",
+      "subSectionTwo": "",
+      "sectionObservations": "",
+      "price": "7 USD",
+      "size": "3 bochas",
+      "ingredients": "Leche, crema, azúcar, frutas de temporada o chocolate"
     }
   ]
 }
