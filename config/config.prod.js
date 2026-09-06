@@ -6,7 +6,7 @@ export const storeConfig = {
     shortName: "#ShortName",
     subtitle: "#SloganOrSubtitle",
     title: "#MenuTitle",
-    url: "https://incoders-tools.github.io/digital-menu/",
+    url: "https://montesgp.github.io/digital-menu/",
     // Imagen destinada a los preview de los enlaces.
     previewImage: "imgs/bergbach-fragrance-preliminar.jpg",
     loader: {
@@ -70,10 +70,10 @@ export const storeConfig = {
       pt: "Legenda ou descrição do rodapé",
     },
     copyright: {
-      es: "© 2025 Incoders - Todos los derechos reservados.",
-      en: "© 2025 Incoders - All rights reserved.",
-      fr: "© 2025 Incoders - Tous droits réservés.",
-      pt: "© 2025 Incoders - Todos os direitos reservados.",
+      es: "© 2025 Patricio Montes - Todos los derechos reservados.",
+      en: "© 2025 Patricio Montes - All rights reserved.",
+      fr: "© 2025 Patricio Montes - Tous droits réservés.",
+      pt: "© 2025 Patricio Montes - Todos os direitos reservados.",
     },
     socialLinks: [
       { platform: "facebook", url: "#" },
