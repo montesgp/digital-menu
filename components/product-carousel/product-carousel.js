@@ -1,5 +1,6 @@
 import { BaseComponent } from "../base/base-component.js";
 import TranslationService from "../../assets/i18n/translationService.js";
+import { storeConfig } from "../../config/config.js";
 
 class ProductCarousel extends BaseComponent {
   constructor() {
@@ -44,7 +45,8 @@ class ProductCarousel extends BaseComponent {
       card.className = "carousel-card";
       card.innerHTML = `
       <img class="product-image" src="${
-        product.image || "/assets/img/placeholder-dessert.jpg"
+        product.image ||
+        `${(storeConfig.site.url || "").replace(/\/$/, "")}/assets/products/placeholder.jpg`
       }" alt="${product.name}" />
       <div class="product-info">
         <div class="product-name">${product.name}</div>

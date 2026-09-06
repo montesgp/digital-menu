@@ -2,6 +2,7 @@
   "products": [
     {
       "name": "Bruschetta",
+      "image": "./assets/products/bruschetta.jpg",
       "description": "Brusquetas de jamon y queso con relleno de pistallos salteados al ajillo cocinados al vapor en reduccion de vino blanco",
       "service": "main",
       "category": "General",
@@ -17,6 +18,7 @@
     },
     {
       "name": "Tortilla",
+      "image": "./assets/products/tortilla.jpg",
       "description": "Tortilla de cebolla caramelizada con miel",
       "service": "main",
       "category": "General",
@@ -32,6 +34,7 @@
     },
     {
       "name": "Bife de chorizo",
+      "image": "./assets/products/bife-de-chorizo.jpg",
       "description": "Bife de chorizo a la parrilla cocinado al quebracho colorado",
       "service": "main",
       "category": "General",
@@ -47,6 +50,7 @@
     },
     {
       "name": "Ruttini Reserva",
+      "image": "./assets/products/ruttini-reserva.jpg",
       "description": "Vino Mendocino cosecha nocturna",
       "service": "drink",
       "category": "WithAlcohol",
@@ -62,6 +66,7 @@
     },
     {
       "name": "Coca-Cola",
+      "image": "./assets/products/coca-cola.jpg",
       "description": "",
       "service": "drink",
       "category": "WithoutAlcohol",
@@ -77,6 +82,7 @@
     },
     {
       "name": "Cerveza Patagonica",
+      "image": "./assets/products/cerveza-patagonica.jpg",
       "description": "Exquisita cerveza elaborada en Bariloche",
       "service": "drink",
       "category": "WithAlcohol",
@@ -92,6 +98,7 @@
     },
     {
       "name": "Pizza de Anana",
+      "image": "./assets/products/pizza-de-anana.jpg",
       "description": "Anana caramelizada con miel",
       "service": "main",
       "category": "General",
@@ -107,6 +114,7 @@
     },
     {
       "name": "BQ Burger",
+      "image": "./assets/products/bq-burger.jpg",
       "description": "Hamburguesa de cerdo a la bbq",
       "service": "main",
       "category": "General",
@@ -122,6 +130,7 @@
     },
     {
       "name": "Carpaccio de Salmón",
+      "image": "./assets/products/carpaccio-de-salmon.jpg",
       "description": "Finas láminas de salmón ahumado con alcaparras y aceite de trufa",
       "service": "starter",
       "category": "pescetarian",
@@ -152,6 +161,7 @@
     },
     {
       "name": "Ceviche de Corvina",
+      "image": "./assets/products/ceviche-de-corvina.jpg",
       "description": "Cubos de corvina marinados en leche de tigre con maíz cancha y boniato",
       "service": "starter",
       "category": "Pescetarian",
@@ -182,6 +192,7 @@
     },
     {
       "name": "Tartar de Atún",
+      "image": "./assets/products/tartar-de-atun.jpg",
       "description": "Dados de atún rojo aliñados con sésamo, soja y aguacate",
       "service": "starter",
       "category": "Pescetarian",
@@ -197,6 +208,7 @@
     },
     {
       "name": "Ensalada César",
+      "image": "./assets/products/ensalada-cesar.jpg",
       "description": "Lechuga romana, pollo a la parrilla, crutones, aderezo César y queso parmesano",
       "service": "starter",
       "category": "General",
@@ -227,6 +239,7 @@
     },
     {
       "name": "Tiramisú",
+      "image": "./assets/products/tiramisu.jpg",
       "description": "Clásico postre italiano con café, mascarpone y cacao",
       "service": "dessert",
       "category": "Vegan",
@@ -242,6 +255,7 @@
     },
     {
       "name": "Coulant de Chocolate",
+      "image": "./assets/products/coulant-de-chocolate.jpg",
       "description": "Bizcocho de chocolate con interior fundente acompañado de helado de vainilla",
       "service": "dessert",
       "category": "Vegetarian",
@@ -257,6 +271,7 @@
     },
     {
       "name": "Crema Catalana",
+      "image": "./assets/products/crema-catalana.jpg",
       "description": "Crema con base de leche y huevo caramelizada con azúcar quemado",
       "service": "dessert",
       "category": "Vegetarian",
@@ -272,6 +287,7 @@
     },
     {
       "name": "Martini Dry",
+      "image": "./assets/products/martini-dry.jpg",
       "description": "Cóctel clásico de ginebra y vermut seco",
       "service": "drink",
       "category": "WithAlcohol",
@@ -287,6 +303,7 @@
     },
     {
       "name": "Negroni",
+      "image": "./assets/products/negroni.jpg",
       "description": "Equilibrio perfecto entre ginebra, vermut rojo y Campari",
       "service": "drink",
       "category": "WithAlcohol",
@@ -422,6 +439,7 @@
     },
     {
       "name": "Cheesecake",
+      "image": "./assets/products/cheesecake.jpg",
       "description": "Tarta de queso cremosa con base de galleta y topping de frutos rojos",
       "service": "dessert",
       "category": "Vegetarian",
@@ -482,6 +500,7 @@
     },
     {
       "name": "Mousse de Chocolate",
+      "image": "./assets/products/mousse-de-chocolate.jpg",
       "description": "Suave mousse de chocolate negro con crujiente de avellanas",
       "service": "dessert",
       "category": "Vegetarian",
@@ -497,6 +516,7 @@
     },
     {
       "name": "Hummus de Garbanzo",
+      "image": "./assets/products/hummus-de-garbanzo.jpg",
       "description": "Puré de garbanzos con tahini, limón y ajo, servido con palitos de verduras",
       "service": "starter",
       "category": "Vegan",
