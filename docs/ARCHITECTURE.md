@@ -1,5 +1,7 @@
 # Architecture
 
+> **Editable diagram:** [`digital-menu-architecture-diagram.drawio`](./digital-menu-architecture-diagram.drawio) — open it with the draw.io desktop app or [app.diagrams.net](https://app.diagrams.net) to edit. GitHub renders it inline.
+
 ```mermaid
 flowchart LR
     subgraph Source
