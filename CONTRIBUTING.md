@@ -79,6 +79,22 @@ Every change to `dev` (and every promotion to `main`) happens through a pull req
 - Reviews are asynchronous; please be patient. Feedback is aimed at improving the change, not blocking contribution.
 - You may be asked to rebase or adjust before the PR is merged.
 
+## Versioning & releases
+
+Releases follow [Semantic Versioning](https://semver.org) (SemVer).
+
+| Version part | Bump when | Example |
+|---|---|---|
+| MAJOR | Breaking changes to the menu data model, public components, or the config contract | `2.0.0` |
+| MINOR | New backward-compatible features | `1.1.0` |
+| PATCH | Bug fixes and small corrections | `1.0.1` |
+
+- Versions are cut on `main` only. A new version is created only after `dev` has been promoted to `main` and verified.
+- Tag format: `vMAJOR.MINOR.PATCH` (for example `v1.1.0`), applied to the production-ready commit on `main`.
+- Every tag is published as a [GitHub Release](https://docs.github.com/repositories/releasing-projects-on-github/managing-releases-in-a-repository) whose notes summarize the changes shipped since the previous release.
+- Before `1.0.0`, bump `MINOR` for feature work and `PATCH` for fixes; `MAJOR` stays `0`.
+- Feature branches merged into `dev` do **not** get their own tags — versions are only cut when `dev` reaches `main`.
+
 ## Commit message examples
 
 ```
