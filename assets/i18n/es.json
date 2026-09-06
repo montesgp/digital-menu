@@ -10,5 +10,8 @@
     "header.cover.home-btn": "Inicio",
     "carousel.default.title": "Sugerencias del chef",
     "carousel.desserts.title": "Postres recomendados",
-    "carousel.full_service.title": "Sugerencias del chef"
+    "carousel.full_service.title": "Sugerencias del chef",
+    "carousel.starters.title": "Entrantes destacados",
+    "carousel.main_courses.title": "Platos principales destacados",
+    "carousel.drinks.title": "Bebidas destacadas"
 }

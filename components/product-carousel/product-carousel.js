@@ -12,18 +12,52 @@ class ProductCarousel extends BaseComponent {
   async onConnected() {
     await this.loadTemplate(import.meta.url);
 
-    // Oculta el contenedor inicialmente hasta que tenga productos
+    // Hide the container until there are products to show
     const wrapper = this.shadowRoot.querySelector(".carousel-container");
     if (wrapper) {
       wrapper.style.display = "none";
     }
 
+    this.setupArrows();
     this.updateTitle();
   }
 
   setProducts(products) {
     this.products = products;
     this.renderCarousel();
+  }
+
+  setupArrows() {
+    const inner = this.shadowRoot.querySelector(".carousel-inner");
+    const prev = this.shadowRoot.querySelector(".carousel-prev");
+    const next = this.shadowRoot.querySelector(".carousel-next");
+    if (!inner || !prev || !next) return;
+
+    const scrollByCard = (direction) => {
+      const card = this.shadowRoot.querySelector(".carousel-card");
+      const gap = parseFloat(getComputedStyle(inner).gap) || 0;
+      const step = card ? card.offsetWidth + gap : inner.clientWidth;
+      inner.scrollBy({ left: direction * step, behavior: "smooth" });
+    };
+
+    prev.addEventListener("click", () => scrollByCard(-1));
+    next.addEventListener("click", () => scrollByCard(1));
+
+    inner.addEventListener("scroll", () => this.updateArrowState(inner, prev, next));
+    this.updateArrowState(inner, prev, next);
+  }
+
+  updateArrowState(inner, prev, next) {
+    if (!inner || !prev || !next) return;
+    const atStart = inner.scrollLeft <= 0;
+    const atEnd = inner.scrollLeft + inner.clientWidth >= inner.scrollWidth - 1;
+    prev.disabled = atStart;
+    next.disabled = atEnd;
+
+    const card = this.shadowRoot.querySelector(".carousel-card");
+    const overflow = card ? inner.scrollWidth > inner.clientWidth + 1 : false;
+    prev.style.visibility = overflow ? "visible" : "hidden";
+    next.style.visibility = overflow ? "visible" : "hidden";
   }
 
   renderCarousel() {
@@ -33,11 +67,11 @@ class ProductCarousel extends BaseComponent {
     if (!container || !wrapper) return;
 
     if (!this.products || !this.products.length) {
-      wrapper.style.display = "none"; // Oculta completamente
+      wrapper.style.display = "none"; // Hide completely when empty
       return;
     }
 
-    wrapper.style.display = ""; // Muestra si hay productos
+    wrapper.style.display = ""; // Show when there are products
     container.innerHTML = "";
 
     this.products.forEach((product) => {
@@ -57,7 +91,7 @@ class ProductCarousel extends BaseComponent {
         }
         ${
           product.ingredients
-            ? `<div class="product-ingredients">Ingredientes: ${product.ingredients}</div>`
+            ? `<div class="product-ingredients">${product.ingredients}</div>`
             : ""
         }
         <div class="product-price-size">${product.price}${
@@ -67,6 +101,11 @@ class ProductCarousel extends BaseComponent {
     `;
       container.appendChild(card);
     });
+
+    const inner = this.shadowRoot.querySelector(".carousel-inner");
+    const prev = this.shadowRoot.querySelector(".carousel-prev");
+    const next = this.shadowRoot.querySelector(".carousel-next");
+    this.updateArrowState(inner, prev, next);
   }
 
   setTitleKey(key) {
@@ -84,7 +123,7 @@ class ProductCarousel extends BaseComponent {
     try {
       carouselTitle.textContent = TranslationService.translate(key);
     } catch (e) {
-      console.warn("Error traduciendo el título del carrusel:", e);
+      console.warn("Error translating carousel title:", e);
       carouselTitle.textContent = key;
     }
   }

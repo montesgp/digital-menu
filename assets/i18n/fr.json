@@ -10,5 +10,8 @@
     "header.cover.home-btn": "#FRheader.cover.home-btn",
     "carousel.default.title": "#FRcarousel.default.title",
     "carousel.desserts.title": "#FRcarousel.desserts.title",
-    "carousel.full_service.title": "#FRcarousel.full_service.title"
+    "carousel.full_service.title": "#FRcarousel.full_service.title",
+    "carousel.starters.title": "#FRcarousel.starters.title",
+    "carousel.main_courses.title": "#FRcarousel.main_courses.title",
+    "carousel.drinks.title": "#FRcarousel.drinks.title"
 }

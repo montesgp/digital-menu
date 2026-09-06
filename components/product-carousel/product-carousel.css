@@ -1,8 +1,6 @@
 .carousel-container {
   margin: 1rem 0;
-  overflow-x: auto;
-  padding: 1rem;
-  border-radius: 1rem;
+  padding: 1rem 0;
 }
 
 .carousel-title {
@@ -13,11 +11,25 @@
     padding-bottom: 0.5rem;
 }
 
+.carousel-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
 .carousel-inner {
   display: flex;
   gap: 1rem;
   overflow-x: auto;
   scroll-behavior: smooth;
+  flex: 1;
+  padding: 0.25rem 0.25rem 0.75rem;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.carousel-inner::-webkit-scrollbar {
+  display: none;
 }
 
 .carousel-card {
@@ -28,12 +40,37 @@
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
-  min-width: 250px;
+}
+
+.carousel-arrow {
+  flex: 0 0 auto;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.05);
+  color: inherit;
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.carousel-arrow:hover {
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.carousel-arrow:disabled {
+  opacity: 0.35;
+  cursor: default;
 }
 
 .product-image {
   width: 100%;
-  height: 160px;
+  height: 105px;
   object-fit: cover;
   border-radius: 0.8rem;
   margin-bottom: 0.5rem;
@@ -64,4 +101,16 @@
   font-weight: bold;
   color: #3f51b5;
   font-size: 1rem;
+}
+
+@media (min-width: 640px) {
+  .carousel-card {
+    flex-basis: 50%;
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel-card {
+    flex-basis: 33.333%;
+  }
 }
