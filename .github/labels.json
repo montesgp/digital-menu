@@ -1,0 +1,14 @@
+[
+  { "name": "type:bug", "color": "d73a4a", "description": "A bug or regression in the app" },
+  { "name": "type:feature", "color": "5319e7", "description": "A new feature or enhancement" },
+  { "name": "type:docs", "color": "0075ca", "description": "Documentation changes" },
+  { "name": "type:refactor", "color": "fbca04", "description": "Code changes that neither fix a bug nor add a feature" },
+  { "name": "type:chore", "color": "fef2c0", "description": "Maintenance, dependencies, or other housekeeping" },
+  { "name": "type:breaking-change", "color": "b60205", "description": "A change that breaks backward compatibility" },
+  { "name": "status:needs-triage", "color": "ff9f1c", "description": "Needs review/triage by the maintainer" },
+  { "name": "status:approved", "color": "0e8a16", "description": "Approved, ready to proceed" },
+  { "name": "status:in-progress", "color": "c5def5", "description": "Work is in progress" },
+  { "name": "status:blocked", "color": "d93f0b", "description": "Blocked by something or awaiting input" },
+  { "name": "status:wontfix", "color": "ffffff", "description": "Accepted as not going to be fixed or implemented" },
+  { "name": "good first issue", "color": "7057ff", "description": "Good for newcomers" }
+]
