@@ -1,0 +1,65 @@
+<mxfile host="Electron">
+  <diagram name="Page-1" id="210Q73H8SzZEFHgay_w1">
+    <mxGraphModel dx="1414" dy="841" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="vz4EMVxpIFnDaXLkwif6-1" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;fontSize=13;" value="Google Sheet" vertex="1">
+          <mxGeometry height="70" width="180" x="290" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="vz4EMVxpIFnDaXLkwif6-2" parent="1" style="text;html=1;fontSize=11;fontColor=#666666;" value="Rows: one product per row" vertex="1">
+          <mxGeometry height="20" width="180" x="290" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="vz4EMVxpIFnDaXLkwif6-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;fontSize=13;" value="Google Apps Script&#xa;Web App" vertex="1">
+          <mxGeometry height="70" width="200" x="610" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="vz4EMVxpIFnDaXLkwif6-4" parent="1" style="text;html=1;fontSize=11;fontColor=#666666;" value="Returns JSON { version, products }" vertex="1">
+          <mxGeometry height="20" width="200" x="610" y="510" as="geometry" />
+        </mxCell>
+        <mxCell id="vz4EMVxpIFnDaXLkwif6-5" edge="1" parent="1" source="vz4EMVxpIFnDaXLkwif6-1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=11;" target="vz4EMVxpIFnDaXLkwif6-3" value="reads">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="vz4EMVxpIFnDaXLkwif6-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;fontSize=13;" value="Browser App" vertex="1">
+          <mxGeometry height="70" width="220" x="976" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="vz4EMVxpIFnDaXLkwif6-7" parent="1" style="text;html=1;fontSize=11;fontColor=#666666;" value="config/config.js → ProductService&#xa;(fetch + cache + filter stock &gt; 0)" vertex="1">
+          <mxGeometry height="40" width="220" x="990" y="522" as="geometry" />
+        </mxCell>
+        <mxCell id="vz4EMVxpIFnDaXLkwif6-8" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=11;" value="fetch (JSON)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="810" y="471" as="sourcePoint" />
+            <mxPoint x="976" y="471" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vz4EMVxpIFnDaXLkwif6-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;fontSize=13;" value="Web Components" vertex="1">
+          <mxGeometry height="90" width="330" x="680" y="829" as="geometry" />
+        </mxCell>
+        <mxCell id="vz4EMVxpIFnDaXLkwif6-10" parent="1" style="text;html=1;fontSize=11;fontColor=#666666;" value="Custom Elements + Shadow DOM&#xa;main.js → service-menu, full-service, drinks…" vertex="1">
+          <mxGeometry height="40" width="290" x="724" y="742" as="geometry" />
+        </mxCell>
+        <mxCell id="vz4EMVxpIFnDaXLkwif6-11" edge="1" parent="1" source="vz4EMVxpIFnDaXLkwif6-6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=11;" target="vz4EMVxpIFnDaXLkwif6-9" value="renders menu">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="842" y="495" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vz4EMVxpIFnDaXLkwif6-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;fontSize=12;dashed=1;" value="Demo mode (optional)" vertex="1">
+          <mxGeometry height="70" width="220" x="976" y="640" as="geometry" />
+        </mxCell>
+        <mxCell id="vz4EMVxpIFnDaXLkwif6-13" parent="1" style="text;html=1;fontSize=11;fontColor=#666666;" value="data/products.json" vertex="1">
+          <mxGeometry height="20" width="220" x="874" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="vz4EMVxpIFnDaXLkwif6-14" edge="1" parent="1" source="vz4EMVxpIFnDaXLkwif6-12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;fontSize=11;dashed=1;" target="vz4EMVxpIFnDaXLkwif6-6" value="no Sheet needed">
+          <mxGeometry relative="1" x="-0.1077" y="-55" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="vz4EMVxpIFnDaXLkwif6-15" parent="1" style="text;html=1;fontSize=16;fontStyle=1;align=center;" value="digital-menu — architecture" vertex="1">
+          <mxGeometry height="30" width="480" x="530" y="380" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
