@@ -7,7 +7,7 @@
 // Checks:
 //   1. Every relative import in main.js resolves to an existing file.
 //   2. data/products.json is valid JSON with a "products" array whose items
-//      have at least "name" and "service" fields.
+//      have stable IDs and complete selectable-language display translations.
 //   3. Every component .js that loads its own template (contains "loadTemplate")
 //      has a sibling .html (and .css where the loader expects it).
 //
@@ -72,6 +72,20 @@ if (!existsSync(productsPath)) {
     if (!Array.isArray(data.products)) {
       fail('data/products.json must contain a "products" array.');
     } else {
+      const productIds = new Set();
+      const localizedDisplayFields = [
+        "name",
+        "description",
+        "ingredients",
+        "categoryDescription",
+        "subcategory",
+        "section",
+        "subSectionOne",
+        "subSectionTwo",
+        "sectionObservations",
+        "size",
+      ];
+
       data.products.forEach((product, index) => {
         const id = `products[${index}]`;
         if (product === null || typeof product !== "object") {
@@ -84,12 +98,84 @@ if (!existsSync(productsPath)) {
         if (!product.service || typeof product.service !== "string") {
           fail(`${id} is missing a string "service" field.`);
         }
+        if (!product.id || typeof product.id !== "string" || !product.id.trim()) {
+          fail(`${id} is missing a nonempty immutable string "id" field.`);
+        } else if (productIds.has(product.id)) {
+          fail(`${id} duplicates product id "${product.id}".`);
+        } else {
+          productIds.add(product.id);
+        }
+
+        for (const lang of ["en", "pt"]) {
+          const localized = product.translations?.[lang];
+          if (!localized || typeof localized !== "object") {
+            fail(`${id} is missing its ${lang} display translation.`);
+            continue;
+          }
+          localizedDisplayFields.forEach((field) => {
+            if (
+              typeof product[field] === "string" &&
+              product[field].trim() &&
+              (!localized[field] || typeof localized[field] !== "string" || !localized[field].trim())
+            ) {
+              fail(`${id} is missing nonempty ${lang} translation for "${field}".`);
+            }
+          });
+        }
       });
     }
   }
 }
 
-// --- 3. Validate component template files ----------------------------------
+// --- 3. Validate selectable-locale dynamic menu strings -------------------
+
+const requiredMenuKeys = [
+  "service-menu.starters",
+  "service-menu.main_courses",
+  "service-menu.drinks",
+  "service-menu.desserts",
+  "service-menu.full_service",
+  "service-menu.full-service.title",
+  "menu.service.starter",
+  "menu.service.main",
+  "menu.service.drink",
+  "menu.service.dessert",
+  "menu.category.all",
+  "menu.empty",
+  "menu.ingredients",
+  "menu.type",
+  "menu.drinks.other",
+  "carousel.controls.label",
+  "carousel.controls.previous",
+  "carousel.controls.next",
+  "carousel.image.alt_fallback",
+  "carousel.default.title",
+  "carousel.desserts.title",
+  "carousel.full_service.title",
+  "carousel.starters.title",
+  "carousel.main_courses.title",
+  "carousel.drinks.title",
+];
+
+for (const lang of ["es", "en", "pt"]) {
+  const dictionaryPath = join(ROOT, "assets", "i18n", `${lang}.json`);
+  if (!existsSync(dictionaryPath)) {
+    fail(`assets/i18n/${lang}.json not found.`);
+    continue;
+  }
+  try {
+    const dictionary = JSON.parse(readFileSync(dictionaryPath, "utf8"));
+    requiredMenuKeys.forEach((key) => {
+      if (!dictionary[key] || typeof dictionary[key] !== "string") {
+        fail(`assets/i18n/${lang}.json is missing dynamic menu key "${key}".`);
+      }
+    });
+  } catch (e) {
+    fail(`assets/i18n/${lang}.json is not valid JSON: ${e.message}`);
+  }
+}
+
+// --- 4. Validate component template files ----------------------------------
 
 function walk(dir, out = []) {
   for (const entry of readdirSafe(dir)) {

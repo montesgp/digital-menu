@@ -1,11 +1,13 @@
 import { storeConfig } from "../../../config/config.js";
 import { BaseComponent } from "../../base/base-component.js";
 import "../../../components/product-carousel/product-carousel.js";
+import { createProductCard, menuText } from "../../../services/menu-localization-service.js";
 
 class FullService extends BaseComponent {
   constructor() {
     super();
     this.products = [];
+    this.handleTranslationsReady = this.handleTranslationsReady.bind(this);
   }
 
   async onConnected() {
@@ -15,6 +17,7 @@ class FullService extends BaseComponent {
     this.setupProductCarousel(this.products);
 
     this.renderFullMenu("all");
+    document.addEventListener("translationsReady", this.handleTranslationsReady);
   }
 
   async loadProducts() {
@@ -36,10 +39,10 @@ class FullService extends BaseComponent {
 
     const servicesOrder = ["starter", "main", "drink", "dessert"];
     const servicesMap = {
-      starter: "Entradas",
-      drink: "Bebidas",
-      main: "Platos Principales",
-      dessert: "Postres",
+      starter: "menu.service.starter",
+      drink: "menu.service.drink",
+      main: "menu.service.main",
+      dessert: "menu.service.dessert",
     };
 
     servicesOrder.forEach((service) => {
@@ -47,32 +50,23 @@ class FullService extends BaseComponent {
       if (!serviceProducts.length) return;
 
       const section = document.createElement("section");
-      section.innerHTML = `<h2 class="section-title">${servicesMap[service]}</h2>`;
+      section.innerHTML = `<h2 class="section-title">${menuText(servicesMap[service])}</h2>`;
 
       serviceProducts.forEach((p) => {
-        const card = document.createElement("div");
-        card.className = "product-card";
-        card.innerHTML = `
-          <div class="product-name">${p.name}</div>
-          ${
-            p.description
-              ? `<div class="product-description">${p.description}</div>`
-              : ""
-          }
-          ${
-            p.ingredients
-              ? `<div class="product-ingredients">Ingredientes: ${p.ingredients}</div>`
-              : ""
-          }
-          <div class="product-price-size">${p.price}${
-          p.size ? " - " + p.size : ""
-        }</div>
-        `;
-        section.appendChild(card);
+        section.appendChild(createProductCard(p));
       });
 
       container.appendChild(section);
     });
+  }
+
+  handleTranslationsReady() {
+    this.renderFullMenu("all");
+    this.setupProductCarousel(this.products);
+  }
+
+  disconnectedCallback() {
+    document.removeEventListener("translationsReady", this.handleTranslationsReady);
   }
 }
 

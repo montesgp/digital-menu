@@ -49,12 +49,12 @@ export class CategorySlider extends HTMLElement {
     this.shadowRoot.appendChild(link);
   }
 
-  setCategories(categories) {
-    const same =
-      JSON.stringify(this.lastCategories) === JSON.stringify(categories);
-    if (same) return;
+  setCategories(categories, activeCategory = this.activeCategory || "all") {
+    const same = JSON.stringify(this.lastCategories) === JSON.stringify(categories);
+    if (same && this.activeCategory === activeCategory) return;
 
     this.lastCategories = categories;
+    this.activeCategory = activeCategory;
 
     const slider = this.shadowRoot.querySelector(".my-slider");
     if (!slider) {
@@ -75,7 +75,9 @@ export class CategorySlider extends HTMLElement {
       item.className = "slide-item";
       item.dataset.category = value;
       item.textContent = label;
-      if (index === 0) item.classList.add("active");
+      if (value === activeCategory || (index === 0 && !categories.some((category) => category.value === activeCategory))) {
+        item.classList.add("active");
+      }
       slider.appendChild(item);
     });
 
@@ -124,6 +126,7 @@ export class CategorySlider extends HTMLElement {
           ?.classList.remove("active");
         item.classList.add("active");
         const category = item.dataset.category;
+        this.activeCategory = category;
         this.dispatchEvent(
           new CustomEvent("categorySelected", {
             detail: { category },

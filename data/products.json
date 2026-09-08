@@ -15,7 +15,34 @@
       "price": "15 USD",
       "size": "",
       "ingredients": "harina de mandioca, azucar, jamon y queso, ajo y aceite de oliva",
-      "featuredRank": 1
+      "featuredRank": 1,
+      "id": "bruschetta",
+      "translations": {
+        "en": {
+          "name": "Bruschetta",
+          "description": "Ham and cheese bruschetta with garlic-sauteed sprouts, steamed and finished with a white-wine reduction",
+          "ingredients": "Cassava flour, sugar, ham, cheese, garlic and olive oil",
+          "categoryDescription": "General",
+          "subcategory": "",
+          "section": "Hot",
+          "subSectionOne": "",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        },
+        "pt": {
+          "name": "Bruschetta",
+          "description": "Bruschettas de presunto e queijo com brotos salteados no alho, cozidos no vapor e finalizados com redução de vinho branco",
+          "ingredients": "Farinha de mandioca, açúcar, presunto, queijo, alho e azeite de oliva",
+          "categoryDescription": "Geral",
+          "subcategory": "",
+          "section": "Quentes",
+          "subSectionOne": "",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Tortilla",
@@ -32,7 +59,34 @@
       "price": "15 USD",
       "size": "",
       "ingredients": "Cebolla, huevo, aceite de girasol, miel",
-      "featuredRank": 2
+      "featuredRank": 2,
+      "id": "tortilla",
+      "translations": {
+        "en": {
+          "name": "Spanish Omelette",
+          "description": "Caramelized onion omelette with honey",
+          "ingredients": "Onion, egg, sunflower oil and honey",
+          "categoryDescription": "General",
+          "subcategory": "",
+          "section": "Cold",
+          "subSectionOne": "",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        },
+        "pt": {
+          "name": "Tortilha espanhola",
+          "description": "Tortilha de cebola caramelizada com mel",
+          "ingredients": "Cebola, ovo, óleo de girassol e mel",
+          "categoryDescription": "Geral",
+          "subcategory": "",
+          "section": "Frios",
+          "subSectionOne": "",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Bife de chorizo",
@@ -49,7 +103,34 @@
       "price": "20 USD",
       "size": "",
       "ingredients": "Carne, aceite de oliva, chimichurri",
-      "featuredRank": 3
+      "featuredRank": 3,
+      "id": "bife-de-chorizo",
+      "translations": {
+        "en": {
+          "name": "Grilled Sirloin Steak",
+          "description": "Charcoal-grilled sirloin steak",
+          "ingredients": "Beef, olive oil and chimichurri",
+          "categoryDescription": "General",
+          "subcategory": "",
+          "section": "Meats",
+          "subSectionOne": "Beef",
+          "subSectionTwo": "Chicken",
+          "sectionObservations": "All dishes are served with fries or salad",
+          "size": ""
+        },
+        "pt": {
+          "name": "Bife de chorizo grelhado",
+          "description": "Bife de chorizo na brasa",
+          "ingredients": "Carne bovina, azeite de oliva e chimichurri",
+          "categoryDescription": "Geral",
+          "subcategory": "",
+          "section": "Carnes",
+          "subSectionOne": "Carne bovina",
+          "subSectionTwo": "Frango",
+          "sectionObservations": "Todos os pratos são servidos com batatas fritas ou salada",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Ruttini Reserva",
@@ -66,7 +147,34 @@
       "price": "15 USD",
       "size": "",
       "ingredients": "uva uva, uva y roble, y ciruela y ciruela, y pera nocturna",
-      "featuredRank": 4
+      "featuredRank": 4,
+      "id": "ruttini-reserva",
+      "translations": {
+        "en": {
+          "name": "Ruttini Reserva",
+          "description": "Mendoza wine made from a night harvest",
+          "ingredients": "Grapes, oak, plum and pear",
+          "categoryDescription": "Alcohol",
+          "subcategory": "",
+          "section": "Wines",
+          "subSectionOne": "Red",
+          "subSectionTwo": "",
+          "sectionObservations": "Corkage: 18 USD",
+          "size": ""
+        },
+        "pt": {
+          "name": "Ruttini Reserva",
+          "description": "Vinho mendocino de colheita noturna",
+          "ingredients": "Uvas, carvalho, ameixa e pera",
+          "categoryDescription": "Alcoólico",
+          "subcategory": "",
+          "section": "Vinhos",
+          "subSectionOne": "Tinto",
+          "subSectionTwo": "",
+          "sectionObservations": "Taxa de rolha: 18 USD",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Coca-Cola",
@@ -83,7 +191,34 @@
       "price": "15 USD",
       "size": "",
       "ingredients": "",
-      "featuredRank": 5
+      "featuredRank": 5,
+      "id": "coca-cola",
+      "translations": {
+        "en": {
+          "name": "Coca-Cola",
+          "description": "",
+          "ingredients": "",
+          "categoryDescription": "Non-alcoholic",
+          "subcategory": "",
+          "section": "",
+          "subSectionOne": "",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        },
+        "pt": {
+          "name": "Coca-Cola",
+          "description": "",
+          "ingredients": "",
+          "categoryDescription": "Sem álcool",
+          "subcategory": "",
+          "section": "",
+          "subSectionOne": "",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Cerveza Patagonica",
@@ -100,7 +235,34 @@
       "price": "15 USD",
       "size": "",
       "ingredients": "lupulo lupulo y maltaaaaa",
-      "featuredRank": 8
+      "featuredRank": 8,
+      "id": "cerveza-patagonica",
+      "translations": {
+        "en": {
+          "name": "Patagonian Beer",
+          "description": "A delicious beer brewed in Bariloche",
+          "ingredients": "Hops and malt",
+          "categoryDescription": "Alcohol",
+          "subcategory": "",
+          "section": "Beers",
+          "subSectionOne": "Craft",
+          "subSectionTwo": "Commercial",
+          "sectionObservations": "",
+          "size": ""
+        },
+        "pt": {
+          "name": "Cerveja Patagônica",
+          "description": "Deliciosa cerveja produzida em Bariloche",
+          "ingredients": "Lúpulo e malte",
+          "categoryDescription": "Alcoólico",
+          "subcategory": "",
+          "section": "Cervejas",
+          "subSectionOne": "Artesanais",
+          "subSectionTwo": "Industriais",
+          "sectionObservations": "",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Pizza de Anana",
@@ -117,7 +279,34 @@
       "price": "20 USD",
       "size": "Big",
       "ingredients": "Harina 000, Agua, Anana, Oregano, Aceite de Oliva, Miel",
-      "featuredRank": 6
+      "featuredRank": 6,
+      "id": "pizza-de-anana",
+      "translations": {
+        "en": {
+          "name": "Pineapple Pizza",
+          "description": "Caramelized pineapple with honey",
+          "ingredients": "Flour, water, pineapple, oregano, olive oil and honey",
+          "categoryDescription": "General",
+          "subcategory": "",
+          "section": "Meats",
+          "subSectionOne": "Beef",
+          "subSectionTwo": "Chicken",
+          "sectionObservations": "All dishes are served with fries or salad",
+          "size": "Large"
+        },
+        "pt": {
+          "name": "Pizza de abacaxi",
+          "description": "Abacaxi caramelizado com mel",
+          "ingredients": "Farinha, água, abacaxi, orégano, azeite de oliva e mel",
+          "categoryDescription": "Geral",
+          "subcategory": "",
+          "section": "Carnes",
+          "subSectionOne": "Carne bovina",
+          "subSectionTwo": "Frango",
+          "sectionObservations": "Todos os pratos são servidos com batatas fritas ou salada",
+          "size": "Grande"
+        }
+      }
     },
     {
       "name": "BQ Burger",
@@ -134,7 +323,34 @@
       "price": "28 USD",
       "size": "Double",
       "ingredients": "500g de carne picada",
-      "featuredRank": 7
+      "featuredRank": 7,
+      "id": "bq-burger",
+      "translations": {
+        "en": {
+          "name": "BQ Burger",
+          "description": "Pulled pork burger with barbecue sauce",
+          "ingredients": "500 g ground meat",
+          "categoryDescription": "General",
+          "subcategory": "",
+          "section": "Burgers",
+          "subSectionOne": "Beef",
+          "subSectionTwo": "Chicken",
+          "sectionObservations": "All burgers are served with fries",
+          "size": "Double"
+        },
+        "pt": {
+          "name": "Hambúrguer BQ",
+          "description": "Hambúrguer de porco ao molho barbecue",
+          "ingredients": "500 g de carne moída",
+          "categoryDescription": "Geral",
+          "subcategory": "",
+          "section": "Hambúrgueres",
+          "subSectionOne": "Carne bovina",
+          "subSectionTwo": "Frango",
+          "sectionObservations": "Todos os hambúrgueres são servidos com batatas fritas",
+          "size": "Duplo"
+        }
+      }
     },
     {
       "name": "Carpaccio de Salmón",
@@ -151,7 +367,34 @@
       "price": "22 USD",
       "size": "",
       "ingredients": "Salmón, alcaparras, aceite de trufa, limón, rúcula",
-      "featuredRank": 11
+      "featuredRank": 11,
+      "id": "carpaccio-de-salmon",
+      "translations": {
+        "en": {
+          "name": "Salmon Carpaccio",
+          "description": "Thin slices of smoked salmon with capers and truffle oil",
+          "ingredients": "Salmon, capers, truffle oil, lemon and arugula",
+          "categoryDescription": "",
+          "subcategory": "",
+          "section": "Cold",
+          "subSectionOne": "Fish",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        },
+        "pt": {
+          "name": "Carpaccio de salmão",
+          "description": "Finas lâminas de salmão defumado com alcaparras e azeite de trufa",
+          "ingredients": "Salmão, alcaparras, azeite de trufa, limão e rúcula",
+          "categoryDescription": "",
+          "subcategory": "",
+          "section": "Frios",
+          "subSectionOne": "Peixes",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Risotto de Hongos",
@@ -166,7 +409,34 @@
       "sectionObservations": "",
       "price": "24 USD",
       "size": "",
-      "ingredients": "Arroz carnaroli, hongos portobello, shiitake y champiñones, caldo vegetal, mantequilla, queso parmesano, vino blanco"
+      "ingredients": "Arroz carnaroli, hongos portobello, shiitake y champiñones, caldo vegetal, mantequilla, queso parmesano, vino blanco",
+      "id": "risotto-de-hongos",
+      "translations": {
+        "en": {
+          "name": "Mushroom Risotto",
+          "description": "Creamy risotto with wild mushrooms and Parmesan cheese",
+          "ingredients": "Carnaroli rice, portobello, shiitake and button mushrooms, vegetable stock, butter, Parmesan cheese and white wine",
+          "categoryDescription": "Vegan",
+          "subcategory": "",
+          "section": "Pasta and Rice",
+          "subSectionOne": "Rice",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        },
+        "pt": {
+          "name": "Risoto de cogumelos",
+          "description": "Risoto cremoso com cogumelos silvestres e queijo parmesão",
+          "ingredients": "Arroz carnaroli, cogumelos portobello, shiitake e champignon, caldo de legumes, manteiga, parmesão e vinho branco",
+          "categoryDescription": "Vegano",
+          "subcategory": "",
+          "section": "Massas e arroz",
+          "subSectionOne": "Arroz",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Ceviche de Corvina",
@@ -183,7 +453,34 @@
       "price": "18 USD",
       "size": "",
       "ingredients": "Corvina fresca, jugo de limón, ají limo, cebolla morada, cilantro, maíz cancha, boniato",
-      "featuredRank": 12
+      "featuredRank": 12,
+      "id": "ceviche-de-corvina",
+      "translations": {
+        "en": {
+          "name": "Sea Bass Ceviche",
+          "description": "Sea bass cubes marinated in leche de tigre with cancha corn and sweet potato",
+          "ingredients": "Fresh sea bass, lemon juice, ají limo, red onion, cilantro, cancha corn and sweet potato",
+          "categoryDescription": "Pescatarian",
+          "subcategory": "gluten-free",
+          "section": "Cold",
+          "subSectionOne": "Fish",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        },
+        "pt": {
+          "name": "Ceviche de corvina",
+          "description": "Cubos de corvina marinados em leite de tigre com milho cancha e batata-doce",
+          "ingredients": "Corvina fresca, suco de limão, ají limo, cebola roxa, coentro, milho cancha e batata-doce",
+          "categoryDescription": "Pescetariano",
+          "subcategory": "sem glúten",
+          "section": "Frios",
+          "subSectionOne": "Peixes",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Pulpo a la Gallega",
@@ -198,7 +495,34 @@
       "sectionObservations": "",
       "price": "32 USD",
       "size": "",
-      "ingredients": "Pulpo, patatas, pimentón de la Vera, aceite de oliva virgen extra, sal gruesa"
+      "ingredients": "Pulpo, patatas, pimentón de la Vera, aceite de oliva virgen extra, sal gruesa",
+      "id": "pulpo-a-la-gallega",
+      "translations": {
+        "en": {
+          "name": "Galician-Style Octopus",
+          "description": "Cooked octopus tentacles on a potato purée base with smoked paprika",
+          "ingredients": "Octopus, potatoes, smoked paprika, extra-virgin olive oil and coarse salt",
+          "categoryDescription": "General",
+          "subcategory": "gluten-free",
+          "section": "Seafood",
+          "subSectionOne": "",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        },
+        "pt": {
+          "name": "Polvo à galega",
+          "description": "Tentáculos de polvo cozido sobre purê de batata com páprica defumada",
+          "ingredients": "Polvo, batatas, páprica defumada, azeite extravirgem e sal grosso",
+          "categoryDescription": "Geral",
+          "subcategory": "sem glúten",
+          "section": "Frutos do mar",
+          "subSectionOne": "",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Tartar de Atún",
@@ -215,7 +539,34 @@
       "price": "26 USD",
       "size": "",
       "ingredients": "Atún rojo, aguacate, soja, sésamo, cebolleta, aceite de oliva",
-      "featuredRank": 13
+      "featuredRank": 13,
+      "id": "tartar-de-atun",
+      "translations": {
+        "en": {
+          "name": "Tuna Tartare",
+          "description": "Seasoned red tuna cubes with sesame, soy and avocado",
+          "ingredients": "Red tuna, avocado, soy, sesame, scallion and olive oil",
+          "categoryDescription": "Pescatarian",
+          "subcategory": "",
+          "section": "Cold",
+          "subSectionOne": "Fish",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        },
+        "pt": {
+          "name": "Tártaro de atum",
+          "description": "Cubos de atum vermelho temperados com gergelim, soja e abacate",
+          "ingredients": "Atum vermelho, abacate, soja, gergelim, cebolinha e azeite de oliva",
+          "categoryDescription": "Pescetariano",
+          "subcategory": "",
+          "section": "Frios",
+          "subSectionOne": "Peixes",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Ensalada César",
@@ -232,7 +583,34 @@
       "price": "16 USD",
       "size": "",
       "ingredients": "Lechuga romana, pollo, pan, queso parmesano, anchoas, ajo, mostaza, aceite de oliva",
-      "featuredRank": 14
+      "featuredRank": 14,
+      "id": "ensalada-cesar",
+      "translations": {
+        "en": {
+          "name": "Caesar Salad",
+          "description": "Romaine lettuce, grilled chicken, croutons, Caesar dressing and Parmesan cheese",
+          "ingredients": "Romaine lettuce, chicken, bread, Parmesan cheese, anchovies, garlic, mustard and olive oil",
+          "categoryDescription": "General",
+          "subcategory": "",
+          "section": "Salads",
+          "subSectionOne": "",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        },
+        "pt": {
+          "name": "Salada Caesar",
+          "description": "Alface romana, frango grelhado, croutons, molho Caesar e queijo parmesão",
+          "ingredients": "Alface romana, frango, pão, parmesão, anchovas, alho, mostarda e azeite de oliva",
+          "categoryDescription": "Geral",
+          "subcategory": "",
+          "section": "Saladas",
+          "subSectionOne": "",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Bowl Vegano",
@@ -247,7 +625,34 @@
       "sectionObservations": "",
       "price": "18 USD",
       "size": "",
-      "ingredients": "Quinoa, espinacas, zanahorias, aguacate, semillas de chía, semillas de calabaza, vinagreta de limón"
+      "ingredients": "Quinoa, espinacas, zanahorias, aguacate, semillas de chía, semillas de calabaza, vinagreta de limón",
+      "id": "bowl-vegano",
+      "translations": {
+        "en": {
+          "name": "Vegan Bowl",
+          "description": "Quinoa base with seasonal vegetables, avocado and seeds",
+          "ingredients": "Quinoa, spinach, carrots, avocado, chia seeds, pumpkin seeds and lemon vinaigrette",
+          "categoryDescription": "Vegan",
+          "subcategory": "gluten-free",
+          "section": "Bowls",
+          "subSectionOne": "",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        },
+        "pt": {
+          "name": "Bowl vegano",
+          "description": "Base de quinoa com vegetais da estação, abacate e sementes",
+          "ingredients": "Quinoa, espinafre, cenouras, abacate, sementes de chia, sementes de abóbora e vinagrete de limão",
+          "categoryDescription": "Vegano",
+          "subcategory": "sem glúten",
+          "section": "Bowls",
+          "subSectionOne": "",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Tiramisú",
@@ -264,7 +669,34 @@
       "price": "12 USD",
       "size": "",
       "ingredients": "Queso mascarpone, huevos, azúcar, café, licor marsala, bizcochos savoiardi, cacao en polvo",
-      "featuredRank": 16
+      "featuredRank": 16,
+      "id": "tiramisu",
+      "translations": {
+        "en": {
+          "name": "Tiramisu",
+          "description": "Classic Italian dessert with coffee, mascarpone and cocoa",
+          "ingredients": "Mascarpone cheese, eggs, sugar, coffee, Marsala liqueur, savoiardi biscuits and cocoa powder",
+          "categoryDescription": "Vegan",
+          "subcategory": "",
+          "section": "Desserts",
+          "subSectionOne": "Classics",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        },
+        "pt": {
+          "name": "Tiramisù",
+          "description": "Clássica sobremesa italiana com café, mascarpone e cacau",
+          "ingredients": "Queijo mascarpone, ovos, açúcar, café, licor Marsala, biscoitos savoiardi e cacau em pó",
+          "categoryDescription": "Vegano",
+          "subcategory": "",
+          "section": "Sobremesas",
+          "subSectionOne": "Clássicos",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Coulant de Chocolate",
@@ -281,7 +713,34 @@
       "price": "14 USD",
       "size": "",
       "ingredients": "Chocolate negro, mantequilla, huevos, harina, azúcar, helado de vainilla",
-      "featuredRank": 17
+      "featuredRank": 17,
+      "id": "coulant-de-chocolate",
+      "translations": {
+        "en": {
+          "name": "Chocolate Coulant",
+          "description": "Chocolate cake with a molten centre, served with vanilla ice cream",
+          "ingredients": "Dark chocolate, butter, eggs, flour, sugar and vanilla ice cream",
+          "categoryDescription": "Vegetarian",
+          "subcategory": "",
+          "section": "Desserts",
+          "subSectionOne": "Chocolate",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        },
+        "pt": {
+          "name": "Coulant de chocolate",
+          "description": "Bolo de chocolate com recheio cremoso, servido com sorvete de baunilha",
+          "ingredients": "Chocolate amargo, manteiga, ovos, farinha, açúcar e sorvete de baunilha",
+          "categoryDescription": "Vegetariano",
+          "subcategory": "",
+          "section": "Sobremesas",
+          "subSectionOne": "Chocolate",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Crema Catalana",
@@ -298,7 +757,34 @@
       "price": "10 USD",
       "size": "",
       "ingredients": "Leche, nata, huevos, azúcar, canela, piel de limón, azúcar moreno",
-      "featuredRank": 18
+      "featuredRank": 18,
+      "id": "crema-catalana",
+      "translations": {
+        "en": {
+          "name": "Catalan Cream",
+          "description": "Milk and egg custard caramelized with burnt sugar",
+          "ingredients": "Milk, cream, eggs, sugar, cinnamon, lemon peel and brown sugar",
+          "categoryDescription": "Vegetarian",
+          "subcategory": "gluten-free",
+          "section": "Desserts",
+          "subSectionOne": "Classics",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        },
+        "pt": {
+          "name": "Creme catalão",
+          "description": "Creme à base de leite e ovos caramelizado com açúcar queimado",
+          "ingredients": "Leite, creme, ovos, açúcar, canela, casca de limão e açúcar mascavo",
+          "categoryDescription": "Vegetariano",
+          "subcategory": "sem glúten",
+          "section": "Sobremesas",
+          "subSectionOne": "Clássicos",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Martini Dry",
@@ -315,7 +801,34 @@
       "price": "16 USD",
       "size": "",
       "ingredients": "Ginebra premium, vermut seco, aceituna verde",
-      "featuredRank": 9
+      "featuredRank": 9,
+      "id": "martini-dry",
+      "translations": {
+        "en": {
+          "name": "Dry Martini",
+          "description": "Classic cocktail with gin and dry vermouth",
+          "ingredients": "Premium gin, dry vermouth and green olive",
+          "categoryDescription": "Alcoholic",
+          "subcategory": "",
+          "section": "Cocktails",
+          "subSectionOne": "Classics",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        },
+        "pt": {
+          "name": "Dry Martini",
+          "description": "Coquetel clássico de gim e vermute seco",
+          "ingredients": "Gim premium, vermute seco e azeitona verde",
+          "categoryDescription": "Com álcool",
+          "subcategory": "",
+          "section": "Coquetéis",
+          "subSectionOne": "Clássicos",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Negroni",
@@ -332,7 +845,34 @@
       "price": "18 USD",
       "size": "",
       "ingredients": "Ginebra, vermut rojo, Campari, naranja",
-      "featuredRank": 10
+      "featuredRank": 10,
+      "id": "negroni",
+      "translations": {
+        "en": {
+          "name": "Negroni",
+          "description": "A perfect balance of gin, red vermouth and Campari",
+          "ingredients": "Gin, red vermouth, Campari and orange",
+          "categoryDescription": "Alcoholic",
+          "subcategory": "",
+          "section": "Cocktails",
+          "subSectionOne": "Classics",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        },
+        "pt": {
+          "name": "Negroni",
+          "description": "Equilíbrio perfeito entre gim, vermute tinto e Campari",
+          "ingredients": "Gim, vermute tinto, Campari e laranja",
+          "categoryDescription": "Com álcool",
+          "subcategory": "",
+          "section": "Coquetéis",
+          "subSectionOne": "Clássicos",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Limonada Casera",
@@ -347,7 +887,34 @@
       "sectionObservations": "",
       "price": "8 USD",
       "size": "",
-      "ingredients": "Limón, azúcar, agua, menta fresca, jengibre"
+      "ingredients": "Limón, azúcar, agua, menta fresca, jengibre",
+      "id": "limonada-casera",
+      "translations": {
+        "en": {
+          "name": "Homemade Lemonade",
+          "description": "Refreshing lemonade with mint and ginger",
+          "ingredients": "Lemon, sugar, water, fresh mint and ginger",
+          "categoryDescription": "Non-alcoholic",
+          "subcategory": "",
+          "section": "Soft Drinks",
+          "subSectionOne": "Homemade",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        },
+        "pt": {
+          "name": "Limonada caseira",
+          "description": "Limonada refrescante com hortelã e gengibre",
+          "ingredients": "Limão, açúcar, água, hortelã fresca e gengibre",
+          "categoryDescription": "Sem álcool",
+          "subcategory": "",
+          "section": "Refrescos",
+          "subSectionOne": "Caseiros",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Smoothie Tropical",
@@ -362,7 +929,34 @@
       "sectionObservations": "",
       "price": "10 USD",
       "size": "",
-      "ingredients": "Mango, piña, plátano, leche de coco, hielo"
+      "ingredients": "Mango, piña, plátano, leche de coco, hielo",
+      "id": "smoothie-tropical",
+      "translations": {
+        "en": {
+          "name": "Tropical Smoothie",
+          "description": "Tropical fruit smoothie with a coconut milk base",
+          "ingredients": "Mango, pineapple, banana, coconut milk and ice",
+          "categoryDescription": "Non-alcoholic",
+          "subcategory": "vegan",
+          "section": "Soft Drinks",
+          "subSectionOne": "Smoothies",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        },
+        "pt": {
+          "name": "Smoothie tropical",
+          "description": "Vitamina de frutas tropicais com leite de coco",
+          "ingredients": "Manga, abacaxi, banana, leite de coco e gelo",
+          "categoryDescription": "Sem álcool",
+          "subcategory": "vegano",
+          "section": "Refrescos",
+          "subSectionOne": "Vitaminas",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Café Espresso",
@@ -377,7 +971,34 @@
       "sectionObservations": "",
       "price": "4 USD",
       "size": "",
-      "ingredients": "Café 100% arábica"
+      "ingredients": "Café 100% arábica",
+      "id": "cafe-espresso",
+      "translations": {
+        "en": {
+          "name": "Espresso Coffee",
+          "description": "Intense naturally roasted coffee",
+          "ingredients": "100% Arabica coffee",
+          "categoryDescription": "Non-alcoholic",
+          "subcategory": "vegan",
+          "section": "Coffee",
+          "subSectionOne": "",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        },
+        "pt": {
+          "name": "Café espresso",
+          "description": "Café intenso de torra natural",
+          "ingredients": "Café 100% arábica",
+          "categoryDescription": "Sem álcool",
+          "subcategory": "vegano",
+          "section": "Cafés",
+          "subSectionOne": "",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Gin Tonic Premium",
@@ -392,7 +1013,34 @@
       "sectionObservations": "",
       "price": "20 USD",
       "size": "",
-      "ingredients": "Ginebra Hendrick's, tónica Fever-Tree, pepino, enebro, cítricos"
+      "ingredients": "Ginebra Hendrick's, tónica Fever-Tree, pepino, enebro, cítricos",
+      "id": "gin-tonic-premium",
+      "translations": {
+        "en": {
+          "name": "Premium Gin and Tonic",
+          "description": "Gin and tonic made with premium gin and artisanal tonic",
+          "ingredients": "Hendrick’s gin, Fever-Tree tonic, cucumber, juniper and citrus",
+          "categoryDescription": "Alcoholic",
+          "subcategory": "",
+          "section": "Cocktails",
+          "subSectionOne": "Signature",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        },
+        "pt": {
+          "name": "Gin tônica premium",
+          "description": "Gin tônica feita com gim premium e tônica artesanal",
+          "ingredients": "Gim Hendrick’s, tônica Fever-Tree, pepino, zimbro e cítricos",
+          "categoryDescription": "Com álcool",
+          "subcategory": "",
+          "section": "Coquetéis",
+          "subSectionOne": "Assinatura",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Lasaña Vegetariana",
@@ -407,7 +1055,34 @@
       "sectionObservations": "",
       "price": "22 USD",
       "size": "",
-      "ingredients": "Pasta fresca, calabacín, berenjena, pimiento, tomate, bechamel, queso mozzarella, queso parmesano"
+      "ingredients": "Pasta fresca, calabacín, berenjena, pimiento, tomate, bechamel, queso mozzarella, queso parmesano",
+      "id": "lasana-vegetariana",
+      "translations": {
+        "en": {
+          "name": "Vegetarian Lasagna",
+          "description": "Layers of pasta with roasted vegetables, béchamel and gratinated cheese",
+          "ingredients": "Fresh pasta, zucchini, eggplant, pepper, tomato, béchamel, mozzarella and Parmesan cheese",
+          "categoryDescription": "General",
+          "subcategory": "",
+          "section": "Pasta and Rice",
+          "subSectionOne": "Pasta",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        },
+        "pt": {
+          "name": "Lasanha vegetariana",
+          "description": "Camadas de massa com legumes assados, bechamel e queijo gratinado",
+          "ingredients": "Massa fresca, abobrinha, berinjela, pimentão, tomate, bechamel, muçarela e parmesão",
+          "categoryDescription": "Geral",
+          "subcategory": "",
+          "section": "Massas e arroz",
+          "subSectionOne": "Massas",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Salmón a la Plancha",
@@ -422,7 +1097,34 @@
       "sectionObservations": "",
       "price": "28 USD",
       "size": "",
-      "ingredients": "Salmón, eneldo, limón, nata, patata, mantequilla, sal marina"
+      "ingredients": "Salmón, eneldo, limón, nata, patata, mantequilla, sal marina",
+      "id": "salmon-a-la-plancha",
+      "translations": {
+        "en": {
+          "name": "Grilled Salmon",
+          "description": "Salmon fillet with dill and lemon sauce over potato purée",
+          "ingredients": "Salmon, dill, lemon, cream, potato, butter and sea salt",
+          "categoryDescription": "General",
+          "subcategory": "gluten-free",
+          "section": "Fish",
+          "subSectionOne": "",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        },
+        "pt": {
+          "name": "Salmão grelhado",
+          "description": "Filé de salmão com molho de endro e limão sobre purê de batata",
+          "ingredients": "Salmão, endro, limão, creme, batata, manteiga e sal marinho",
+          "categoryDescription": "Geral",
+          "subcategory": "sem glúten",
+          "section": "Peixes",
+          "subSectionOne": "",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Tacos de Jackfruit",
@@ -437,7 +1139,34 @@
       "sectionObservations": "",
       "price": "16 USD",
       "size": "",
-      "ingredients": "Tortillas de maíz, jackfruit, salsa barbacoa vegana, cebolla morada, cilantro, aguacate"
+      "ingredients": "Tortillas de maíz, jackfruit, salsa barbacoa vegana, cebolla morada, cilantro, aguacate",
+      "id": "tacos-de-jackfruit",
+      "translations": {
+        "en": {
+          "name": "Jackfruit Tacos",
+          "description": "Vegan tacos with pulled-pork-style jackfruit",
+          "ingredients": "Corn tortillas, jackfruit, vegan barbecue sauce, red onion, cilantro and avocado",
+          "categoryDescription": "Vegan",
+          "subcategory": "",
+          "section": "International",
+          "subSectionOne": "Mexican",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        },
+        "pt": {
+          "name": "Tacos de jackfruit",
+          "description": "Tacos veganos com jackfruit desfiada ao estilo pulled pork",
+          "ingredients": "Tortilhas de milho, jackfruit, molho barbecue vegano, cebola roxa, coentro e abacate",
+          "categoryDescription": "Vegano",
+          "subcategory": "",
+          "section": "Internacionais",
+          "subSectionOne": "Mexicanos",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Costillas BBQ",
@@ -452,7 +1181,34 @@
       "sectionObservations": "Se sirve con coleslaw y patatas asadas",
       "price": "30 USD",
       "size": "",
-      "ingredients": "Costillar de cerdo, salsa BBQ casera, especias, miel"
+      "ingredients": "Costillar de cerdo, salsa BBQ casera, especias, miel",
+      "id": "costillas-bbq",
+      "translations": {
+        "en": {
+          "name": "BBQ Ribs",
+          "description": "Slow-cooked pork ribs glazed with homemade barbecue sauce",
+          "ingredients": "Pork ribs, homemade BBQ sauce, spices and honey",
+          "categoryDescription": "General",
+          "subcategory": "",
+          "section": "Meats",
+          "subSectionOne": "Pork",
+          "subSectionTwo": "",
+          "sectionObservations": "Served with coleslaw and roasted potatoes",
+          "size": ""
+        },
+        "pt": {
+          "name": "Costelas BBQ",
+          "description": "Costelas de porco glaceadas com molho barbecue caseiro e cozimento lento",
+          "ingredients": "Costelas de porco, molho BBQ caseiro, especiarias e mel",
+          "categoryDescription": "Geral",
+          "subcategory": "",
+          "section": "Carnes",
+          "subSectionOne": "Porco",
+          "subSectionTwo": "",
+          "sectionObservations": "Servido com coleslaw e batatas assadas",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Cheesecake",
@@ -469,7 +1225,34 @@
       "price": "12 USD",
       "size": "",
       "ingredients": "Queso crema, nata, azúcar, huevos, galletas, mantequilla, frutos rojos",
-      "featuredRank": 19
+      "featuredRank": 19,
+      "id": "cheesecake",
+      "translations": {
+        "en": {
+          "name": "Cheesecake",
+          "description": "Creamy cheesecake with a biscuit base and red berry topping",
+          "ingredients": "Cream cheese, cream, sugar, eggs, biscuits, butter and red berries",
+          "categoryDescription": "Vegetarian",
+          "subcategory": "",
+          "section": "Desserts",
+          "subSectionOne": "Tarts",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        },
+        "pt": {
+          "name": "Cheesecake",
+          "description": "Torta de queijo cremosa com base de biscoito e cobertura de frutas vermelhas",
+          "ingredients": "Cream cheese, creme, açúcar, ovos, biscoitos, manteiga e frutas vermelhas",
+          "categoryDescription": "Vegetariano",
+          "subcategory": "",
+          "section": "Sobremesas",
+          "subSectionOne": "Tortas",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Agua Mineral",
@@ -484,7 +1267,34 @@
       "sectionObservations": "",
       "price": "5 USD",
       "size": "500ml",
-      "ingredients": "Agua mineral natural"
+      "ingredients": "Agua mineral natural",
+      "id": "agua-mineral",
+      "translations": {
+        "en": {
+          "name": "Mineral Water",
+          "description": "Natural mineral water, still or sparkling",
+          "ingredients": "Natural mineral water",
+          "categoryDescription": "Non-alcoholic",
+          "subcategory": "vegan",
+          "section": "Drinks",
+          "subSectionOne": "",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": "500 ml"
+        },
+        "pt": {
+          "name": "Água mineral",
+          "description": "Água mineral natural com ou sem gás",
+          "ingredients": "Água mineral natural",
+          "categoryDescription": "Sem álcool",
+          "subcategory": "vegano",
+          "section": "Bebidas",
+          "subSectionOne": "",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": "500 ml"
+        }
+      }
     },
     {
       "name": "Sangría",
@@ -499,7 +1309,34 @@
       "sectionObservations": "",
       "price": "12 USD",
       "size": "Jarra",
-      "ingredients": "Vino tinto, brandy, naranja, limón, azúcar, canela"
+      "ingredients": "Vino tinto, brandy, naranja, limón, azúcar, canela",
+      "id": "sangria",
+      "translations": {
+        "en": {
+          "name": "Sangria",
+          "description": "Traditional Spanish sangria with red wine and fresh fruit",
+          "ingredients": "Red wine, brandy, orange, lemon, sugar and cinnamon",
+          "categoryDescription": "Alcoholic",
+          "subcategory": "",
+          "section": "Drinks",
+          "subSectionOne": "Traditional",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": "Pitcher"
+        },
+        "pt": {
+          "name": "Sangria",
+          "description": "Sangria espanhola tradicional com vinho tinto e frutas frescas",
+          "ingredients": "Vinho tinto, brandy, laranja, limão, açúcar e canela",
+          "categoryDescription": "Com álcool",
+          "subcategory": "",
+          "section": "Bebidas",
+          "subSectionOne": "Tradicionais",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": "Jarra"
+        }
+      }
     },
     {
       "name": "Paella Mixta",
@@ -514,7 +1351,34 @@
       "sectionObservations": "Mínimo para 2 personas",
       "price": "50 USD",
       "size": "2 personas",
-      "ingredients": "Arroz bomba, azafrán, pollo, gambas, mejillones, calamares, pimiento, guisantes, tomate"
+      "ingredients": "Arroz bomba, azafrán, pollo, gambas, mejillones, calamares, pimiento, guisantes, tomate",
+      "id": "paella-mixta",
+      "translations": {
+        "en": {
+          "name": "Mixed Paella",
+          "description": "Saffron rice with chicken, seafood and vegetables",
+          "ingredients": "Bomba rice, saffron, chicken, prawns, mussels, squid, pepper, peas and tomato",
+          "categoryDescription": "General",
+          "subcategory": "gluten-free",
+          "section": "Rice",
+          "subSectionOne": "Traditional",
+          "subSectionTwo": "",
+          "sectionObservations": "Minimum for 2 people",
+          "size": "2 people"
+        },
+        "pt": {
+          "name": "Paella mista",
+          "description": "Arroz com açafrão, frango, frutos do mar e vegetais",
+          "ingredients": "Arroz bomba, açafrão, frango, camarões, mexilhões, lulas, pimentão, ervilhas e tomate",
+          "categoryDescription": "Geral",
+          "subcategory": "sem glúten",
+          "section": "Arroz",
+          "subSectionOne": "Tradicionais",
+          "subSectionTwo": "",
+          "sectionObservations": "Mínimo para 2 pessoas",
+          "size": "2 pessoas"
+        }
+      }
     },
     {
       "name": "Mousse de Chocolate",
@@ -531,7 +1395,34 @@
       "price": "10 USD",
       "size": "",
       "ingredients": "Chocolate negro, huevos, nata, azúcar, avellanas caramelizadas",
-      "featuredRank": 20
+      "featuredRank": 20,
+      "id": "mousse-de-chocolate",
+      "translations": {
+        "en": {
+          "name": "Chocolate Mousse",
+          "description": "Smooth dark chocolate mousse with crunchy hazelnuts",
+          "ingredients": "Dark chocolate, eggs, cream, sugar and caramelized hazelnuts",
+          "categoryDescription": "Vegetarian",
+          "subcategory": "gluten-free",
+          "section": "Desserts",
+          "subSectionOne": "Chocolate",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        },
+        "pt": {
+          "name": "Mousse de chocolate",
+          "description": "Mousse suave de chocolate amargo com avelãs crocantes",
+          "ingredients": "Chocolate amargo, ovos, creme, açúcar e avelãs caramelizadas",
+          "categoryDescription": "Vegetariano",
+          "subcategory": "sem glúten",
+          "section": "Sobremesas",
+          "subSectionOne": "Chocolate",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Hummus de Garbanzo",
@@ -547,7 +1438,34 @@
       "price": "12 USD",
       "size": "",
       "ingredients": "Garbanzos, tahini, limón, ajo, aceite de oliva, perejil",
-      "featuredRank": 15
+      "featuredRank": 15,
+      "id": "hummus-de-garbanzo",
+      "translations": {
+        "en": {
+          "name": "Chickpea Hummus",
+          "description": "Chickpea purée with tahini, lemon and garlic, served with vegetable sticks",
+          "ingredients": "Chickpeas, tahini, lemon, garlic, olive oil and parsley",
+          "categoryDescription": "Vegan",
+          "subcategory": "",
+          "section": "Vegan Starters",
+          "subSectionOne": "",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        },
+        "pt": {
+          "name": "Homus de grão-de-bico",
+          "description": "Purê de grão-de-bico com tahine, limão e alho, servido com palitos de vegetais",
+          "ingredients": "Grão-de-bico, tahine, limão, alho, azeite de oliva e salsa",
+          "categoryDescription": "Vegano",
+          "subcategory": "",
+          "section": "Entradas veganas",
+          "subSectionOne": "",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Bruschetta sin gluten",
@@ -561,7 +1479,34 @@
       "sectionObservations": "",
       "price": "14 USD",
       "size": "",
-      "ingredients": "Tomates, pan sin gluten, ajo, albahaca, aceite de oliva"
+      "ingredients": "Tomates, pan sin gluten, ajo, albahaca, aceite de oliva",
+      "id": "bruschetta-sin-gluten",
+      "translations": {
+        "en": {
+          "name": "Gluten-Free Bruschetta",
+          "description": "Gluten-free bread slices with tomato, garlic, basil and olive oil",
+          "ingredients": "Tomatoes, gluten-free bread, garlic, basil and olive oil",
+          "categoryDescription": "Gluten-free",
+          "subcategory": "",
+          "section": "Gluten-Free Starters",
+          "subSectionOne": "",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        },
+        "pt": {
+          "name": "Bruschetta sem glúten",
+          "description": "Fatias de pão sem glúten com tomate, alho, manjericão e azeite",
+          "ingredients": "Tomates, pão sem glúten, alho, manjericão e azeite de oliva",
+          "categoryDescription": "Sem glúten",
+          "subcategory": "",
+          "section": "Entradas sem glúten",
+          "subSectionOne": "",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Sopa de Calabaza",
@@ -575,7 +1520,34 @@
       "sectionObservations": "",
       "price": "10 USD",
       "size": "",
-      "ingredients": "Calabaza, cebolla, ajo, caldo vegetal, especias, semillas de calabaza"
+      "ingredients": "Calabaza, cebolla, ajo, caldo vegetal, especias, semillas de calabaza",
+      "id": "sopa-de-calabaza",
+      "translations": {
+        "en": {
+          "name": "Pumpkin Soup",
+          "description": "Smooth pumpkin soup with a touch of cream and toasted seeds",
+          "ingredients": "Pumpkin, onion, garlic, vegetable stock, spices and pumpkin seeds",
+          "categoryDescription": "Vegan",
+          "subcategory": "",
+          "section": "Soups",
+          "subSectionOne": "",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        },
+        "pt": {
+          "name": "Sopa de abóbora",
+          "description": "Sopa suave de abóbora com um toque de creme e sementes tostadas",
+          "ingredients": "Abóbora, cebola, alho, caldo de legumes, especiarias e sementes de abóbora",
+          "categoryDescription": "Vegano",
+          "subcategory": "",
+          "section": "Sopas",
+          "subSectionOne": "",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Ensalada de Quinoa y Vegetales",
@@ -589,7 +1561,34 @@
       "sectionObservations": "",
       "price": "15 USD",
       "size": "",
-      "ingredients": "Quinoa, pepino, pimiento, tomates cherry, menta, limón"
+      "ingredients": "Quinoa, pepino, pimiento, tomates cherry, menta, limón",
+      "id": "ensalada-de-quinoa-y-vegetales",
+      "translations": {
+        "en": {
+          "name": "Quinoa and Vegetable Salad",
+          "description": "A mix of quinoa, cucumber, pepper, cherry tomatoes, mint and lemon",
+          "ingredients": "Quinoa, cucumber, pepper, cherry tomatoes, mint and lemon",
+          "categoryDescription": "Vegan",
+          "subcategory": "",
+          "section": "Salads",
+          "subSectionOne": "",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        },
+        "pt": {
+          "name": "Salada de quinoa e vegetais",
+          "description": "Mistura de quinoa, pepino, pimentão, tomate-cereja, hortelã e limão",
+          "ingredients": "Quinoa, pepino, pimentão, tomate-cereja, hortelã e limão",
+          "categoryDescription": "Vegano",
+          "subcategory": "",
+          "section": "Saladas",
+          "subSectionOne": "",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Gazpacho Andaluz",
@@ -603,7 +1602,34 @@
       "sectionObservations": "",
       "price": "11 USD",
       "size": "",
-      "ingredients": "Tomates, pimiento, pepino, cebolla, ajo, aceite de oliva, vinagre"
+      "ingredients": "Tomates, pimiento, pepino, cebolla, ajo, aceite de oliva, vinagre",
+      "id": "gazpacho-andaluz",
+      "translations": {
+        "en": {
+          "name": "Andalusian Gazpacho",
+          "description": "Cold tomato and vegetable soup, perfect for hot days",
+          "ingredients": "Tomatoes, pepper, cucumber, onion, garlic, olive oil and vinegar",
+          "categoryDescription": "Gluten-free",
+          "subcategory": "",
+          "section": "Soups and Creams",
+          "subSectionOne": "",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        },
+        "pt": {
+          "name": "Gaspacho andaluz",
+          "description": "Sopa fria de tomate e vegetais, ideal para dias quentes",
+          "ingredients": "Tomates, pimentão, pepino, cebola, alho, azeite de oliva e vinagre",
+          "categoryDescription": "Sem glúten",
+          "subcategory": "",
+          "section": "Sopas e cremes",
+          "subSectionOne": "",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Brownie con Helado",
@@ -618,7 +1644,34 @@
       "sectionObservations": "",
       "price": "11 USD",
       "size": "",
-      "ingredients": "Chocolate, mantequilla, huevos, azúcar, nueces, helado de crema"
+      "ingredients": "Chocolate, mantequilla, huevos, azúcar, nueces, helado de crema",
+      "id": "brownie-con-helado",
+      "translations": {
+        "en": {
+          "name": "Brownie with Ice Cream",
+          "description": "Warm chocolate brownie with walnuts, served with vanilla ice cream",
+          "ingredients": "Chocolate, butter, eggs, sugar, walnuts and cream ice cream",
+          "categoryDescription": "Vegetarian",
+          "subcategory": "",
+          "section": "Desserts",
+          "subSectionOne": "Chocolate",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        },
+        "pt": {
+          "name": "Brownie com sorvete",
+          "description": "Brownie de chocolate morno com nozes, servido com sorvete de baunilha",
+          "ingredients": "Chocolate, manteiga, ovos, açúcar, nozes e sorvete de creme",
+          "categoryDescription": "Vegetariano",
+          "subcategory": "",
+          "section": "Sobremesas",
+          "subSectionOne": "Chocolate",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Flan Casero",
@@ -633,7 +1686,34 @@
       "sectionObservations": "",
       "price": "8 USD",
       "size": "",
-      "ingredients": "Huevos, leche, azúcar, caramelo, crema batida"
+      "ingredients": "Huevos, leche, azúcar, caramelo, crema batida",
+      "id": "flan-casero",
+      "translations": {
+        "en": {
+          "name": "Homemade Flan",
+          "description": "Egg custard with caramel and whipped cream",
+          "ingredients": "Eggs, milk, sugar, caramel and whipped cream",
+          "categoryDescription": "Vegetarian",
+          "subcategory": "gluten-free",
+          "section": "Desserts",
+          "subSectionOne": "Classics",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        },
+        "pt": {
+          "name": "Pudim caseiro",
+          "description": "Pudim de ovos com caramelo e creme batido",
+          "ingredients": "Ovos, leite, açúcar, caramelo e creme batido",
+          "categoryDescription": "Vegetariano",
+          "subcategory": "sem glúten",
+          "section": "Sobremesas",
+          "subSectionOne": "Clássicos",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Tarta de Manzana",
@@ -648,7 +1728,34 @@
       "sectionObservations": "",
       "price": "11 USD",
       "size": "Porción",
-      "ingredients": "Manzanas, harina, mantequilla, azúcar, canela, huevo, helado de vainilla"
+      "ingredients": "Manzanas, harina, mantequilla, azúcar, canela, huevo, helado de vainilla",
+      "id": "tarta-de-manzana",
+      "translations": {
+        "en": {
+          "name": "Apple Pie",
+          "description": "Classic apple pie with cinnamon and vanilla ice cream",
+          "ingredients": "Apples, flour, butter, sugar, cinnamon, egg and vanilla ice cream",
+          "categoryDescription": "Vegetarian",
+          "subcategory": "",
+          "section": "Desserts",
+          "subSectionOne": "Tarts",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": "Portion"
+        },
+        "pt": {
+          "name": "Torta de maçã",
+          "description": "Clássica torta de maçã com canela e sorvete de baunilha",
+          "ingredients": "Maçãs, farinha, manteiga, açúcar, canela, ovo e sorvete de baunilha",
+          "categoryDescription": "Vegetariano",
+          "subcategory": "",
+          "section": "Sobremesas",
+          "subSectionOne": "Tortas",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": "Porção"
+        }
+      }
     },
     {
       "name": "Panna Cotta de Frutos Rojos",
@@ -663,7 +1770,34 @@
       "sectionObservations": "",
       "price": "9 USD",
       "size": "",
-      "ingredients": "Crema, leche, azúcar, gelatina, frutos rojos, menta"
+      "ingredients": "Crema, leche, azúcar, gelatina, frutos rojos, menta",
+      "id": "panna-cotta-de-frutos-rojos",
+      "translations": {
+        "en": {
+          "name": "Red Berry Panna Cotta",
+          "description": "Smooth panna cotta with red berry coulis and fresh mint",
+          "ingredients": "Cream, milk, sugar, gelatin, red berries and mint",
+          "categoryDescription": "Vegetarian",
+          "subcategory": "gluten-free",
+          "section": "Desserts",
+          "subSectionOne": "Creams",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        },
+        "pt": {
+          "name": "Panna cotta de frutas vermelhas",
+          "description": "Panna cotta suave com coulis de frutas vermelhas e hortelã fresca",
+          "ingredients": "Creme, leite, açúcar, gelatina, frutas vermelhas e hortelã",
+          "categoryDescription": "Vegetariano",
+          "subcategory": "sem glúten",
+          "section": "Sobremesas",
+          "subSectionOne": "Cremes",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": ""
+        }
+      }
     },
     {
       "name": "Helado Artesanal",
@@ -678,7 +1812,34 @@
       "sectionObservations": "",
       "price": "7 USD",
       "size": "3 bochas",
-      "ingredients": "Leche, crema, azúcar, frutas de temporada o chocolate"
+      "ingredients": "Leche, crema, azúcar, frutas de temporada o chocolate",
+      "id": "helado-artesanal",
+      "translations": {
+        "en": {
+          "name": "Artisanal Ice Cream",
+          "description": "Three scoops of artisanal ice cream of the day",
+          "ingredients": "Milk, cream, sugar, seasonal fruit or chocolate",
+          "categoryDescription": "Vegetarian",
+          "subcategory": "vegan",
+          "section": "Desserts",
+          "subSectionOne": "Ice Cream",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": "3 scoops"
+        },
+        "pt": {
+          "name": "Sorvete artesanal",
+          "description": "Três bolas de sorvete artesanal do dia à escolha",
+          "ingredients": "Leite, creme, açúcar, frutas da estação ou chocolate",
+          "categoryDescription": "Vegetariano",
+          "subcategory": "vegano",
+          "section": "Sobremesas",
+          "subSectionOne": "Sorvetes",
+          "subSectionTwo": "",
+          "sectionObservations": "",
+          "size": "3 bolas"
+        }
+      }
     }
   ]
 }
