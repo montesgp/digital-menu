@@ -1,5 +1,6 @@
 import { BaseComponent } from "../base/base-component.js";
 import TranslationService from "../../assets/i18n/translationService.js";
+import { localizeProduct, menuText } from "../../services/menu-localization-service.js";
 
 class ProductCarousel extends BaseComponent {
   constructor() {
@@ -13,6 +14,7 @@ class ProductCarousel extends BaseComponent {
     this.handleScroll = this.updateControls.bind(this);
     this.handleControlClick = this.handleControlClick.bind(this);
     this.handleResize = this.handleResize.bind(this);
+    this.handleTranslationsReady = this.handleTranslationsReady.bind(this);
   }
 
   async onConnected() {
@@ -20,10 +22,13 @@ class ProductCarousel extends BaseComponent {
     this.setupControls();
     this.updateTitle();
     this.renderCarousel();
+    this.handleTranslationsReady();
+    document.addEventListener("translationsReady", this.handleTranslationsReady);
   }
 
   disconnectedCallback() {
     this.resizeObserver?.disconnect();
+    document.removeEventListener("translationsReady", this.handleTranslationsReady);
   }
 
   setProducts(products) {
@@ -99,6 +104,7 @@ class ProductCarousel extends BaseComponent {
     container.replaceChildren();
 
     this.products.forEach((product) => {
+      const display = localizeProduct(product);
       const card = document.createElement("article");
       card.className = "carousel-card";
       card.tabIndex = 0;
@@ -107,7 +113,7 @@ class ProductCarousel extends BaseComponent {
       const image = document.createElement("img");
       image.className = "product-image";
       image.src = product.image || this.placeholderImage;
-      image.alt = product.name || "Featured product";
+      image.alt = display.name || menuText("carousel.image.alt_fallback");
       image.loading = "lazy";
       image.decoding = "async";
       image.addEventListener(
@@ -125,27 +131,27 @@ class ProductCarousel extends BaseComponent {
 
       const name = document.createElement("h3");
       name.className = "product-name";
-      name.textContent = product.name || "Featured product";
+      name.textContent = display.name || menuText("carousel.image.alt_fallback");
       info.appendChild(name);
 
-      if (product.description) {
+      if (display.description) {
         const description = document.createElement("p");
         description.className = "product-description";
-        description.textContent = product.description;
+        description.textContent = display.description;
         info.appendChild(description);
       }
 
-      if (product.ingredients) {
+      if (display.ingredients) {
         const ingredients = document.createElement("p");
         ingredients.className = "product-ingredients";
-        ingredients.textContent = product.ingredients;
+        ingredients.textContent = `${menuText("menu.ingredients")}: ${display.ingredients}`;
         info.appendChild(ingredients);
       }
 
       const price = document.createElement("p");
       price.className = "product-price-size";
-      price.textContent = `${product.price || ""}${
-        product.size ? ` - ${product.size}` : ""
+      price.textContent = `${display.price || ""}${
+        display.size ? ` - ${display.size}` : ""
       }`;
       info.appendChild(price);
 
@@ -174,6 +180,17 @@ class ProductCarousel extends BaseComponent {
       console.warn("Error translating carousel title:", e);
       carouselTitle.textContent = key;
     }
+  }
+
+  handleTranslationsReady() {
+    this.updateTitle();
+    this.renderCarousel();
+    const controls = this.shadowRoot.querySelector(".carousel-controls");
+    const previous = this.shadowRoot.querySelector('[data-direction="previous"]');
+    const next = this.shadowRoot.querySelector('[data-direction="next"]');
+    if (controls) controls.setAttribute("aria-label", menuText("carousel.controls.label"));
+    if (previous) previous.setAttribute("aria-label", menuText("carousel.controls.previous"));
+    if (next) next.setAttribute("aria-label", menuText("carousel.controls.next"));
   }
 }
 
