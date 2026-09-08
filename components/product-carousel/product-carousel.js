@@ -1,111 +1,91 @@
 import { BaseComponent } from "../base/base-component.js";
 import TranslationService from "../../assets/i18n/translationService.js";
-import { storeConfig } from "../../config/config.js";
 
 class ProductCarousel extends BaseComponent {
   constructor() {
     super();
     this.products = [];
     this.titleKey = null;
+    this.placeholderImage = new URL(
+      "../../assets/products/placeholder.jpg",
+      import.meta.url
+    ).href;
   }
 
   async onConnected() {
     await this.loadTemplate(import.meta.url);
-
-    // Hide the container until there are products to show
-    const wrapper = this.shadowRoot.querySelector(".carousel-container");
-    if (wrapper) {
-      wrapper.style.display = "none";
-    }
-
-    this.setupArrows();
     this.updateTitle();
-  }
-
-  setProducts(products) {
-    this.products = products;
     this.renderCarousel();
   }
 
-  setupArrows() {
-    const inner = this.shadowRoot.querySelector(".carousel-inner");
-    const prev = this.shadowRoot.querySelector(".carousel-prev");
-    const next = this.shadowRoot.querySelector(".carousel-next");
-    if (!inner || !prev || !next) return;
-
-    const scrollByCard = (direction) => {
-      const card = this.shadowRoot.querySelector(".carousel-card");
-      const gap = parseFloat(getComputedStyle(inner).gap) || 0;
-      const step = card ? card.offsetWidth + gap : inner.clientWidth;
-      inner.scrollBy({ left: direction * step, behavior: "smooth" });
-    };
-
-    prev.addEventListener("click", () => scrollByCard(-1));
-    next.addEventListener("click", () => scrollByCard(1));
-
-    inner.addEventListener("scroll", () => this.updateArrowState(inner, prev, next));
-    this.updateArrowState(inner, prev, next);
-  }
-
-  updateArrowState(inner, prev, next) {
-    if (!inner || !prev || !next) return;
-    const atStart = inner.scrollLeft <= 0;
-    const atEnd = inner.scrollLeft + inner.clientWidth >= inner.scrollWidth - 1;
-    prev.disabled = atStart;
-    next.disabled = atEnd;
-
-    const card = this.shadowRoot.querySelector(".carousel-card");
-    const overflow = card ? inner.scrollWidth > inner.clientWidth + 1 : false;
-    prev.style.visibility = overflow ? "visible" : "hidden";
-    next.style.visibility = overflow ? "visible" : "hidden";
+  setProducts(products) {
+    this.products = Array.isArray(products) ? products : [];
+    this.renderCarousel();
   }
 
   renderCarousel() {
-    const container = this.shadowRoot.querySelector(".carousel-inner");
+    const container = this.shadowRoot.querySelector(".featured-grid");
     const wrapper = this.shadowRoot.querySelector(".carousel-container");
-
     if (!container || !wrapper) return;
 
-    if (!this.products || !this.products.length) {
-      wrapper.style.display = "none"; // Hide completely when empty
+    if (!this.products.length) {
+      wrapper.hidden = true;
       return;
     }
 
-    wrapper.style.display = ""; // Show when there are products
-    container.innerHTML = "";
+    wrapper.hidden = false;
+    container.replaceChildren();
 
     this.products.forEach((product) => {
-      const card = document.createElement("div");
+      const card = document.createElement("article");
       card.className = "carousel-card";
-      card.innerHTML = `
-      <img class="product-image" src="${
-        product.image ||
-        `${(storeConfig.site.url || "").replace(/\/$/, "")}/assets/products/placeholder.jpg`
-      }" alt="${product.name}" />
-      <div class="product-info">
-        <div class="product-name">${product.name}</div>
-        ${
-          product.description
-            ? `<div class="product-description">${product.description}</div>`
-            : ""
+      card.tabIndex = 0;
+      card.setAttribute("role", "listitem");
+
+      const image = document.createElement("img");
+      image.className = "product-image";
+      image.src = product.image || this.placeholderImage;
+      image.alt = product.name || "Featured product";
+      image.loading = "lazy";
+      image.decoding = "async";
+      image.addEventListener("error", () => {
+        if (image.src !== this.placeholderImage) {
+          image.src = this.placeholderImage;
         }
-        ${
-          product.ingredients
-            ? `<div class="product-ingredients">${product.ingredients}</div>`
-            : ""
-        }
-        <div class="product-price-size">${product.price}${
-        product.size ? " - " + product.size : ""
-      }</div>
-      </div>
-    `;
+      }, { once: true });
+
+      const info = document.createElement("div");
+      info.className = "product-info";
+
+      const name = document.createElement("h3");
+      name.className = "product-name";
+      name.textContent = product.name || "Featured product";
+      info.appendChild(name);
+
+      if (product.description) {
+        const description = document.createElement("p");
+        description.className = "product-description";
+        description.textContent = product.description;
+        info.appendChild(description);
+      }
+
+      if (product.ingredients) {
+        const ingredients = document.createElement("p");
+        ingredients.className = "product-ingredients";
+        ingredients.textContent = product.ingredients;
+        info.appendChild(ingredients);
+      }
+
+      const price = document.createElement("p");
+      price.className = "product-price-size";
+      price.textContent = `${product.price || ""}${
+        product.size ? ` - ${product.size}` : ""
+      }`;
+      info.appendChild(price);
+
+      card.append(image, info);
       container.appendChild(card);
     });
-
-    const inner = this.shadowRoot.querySelector(".carousel-inner");
-    const prev = this.shadowRoot.querySelector(".carousel-prev");
-    const next = this.shadowRoot.querySelector(".carousel-next");
-    this.updateArrowState(inner, prev, next);
   }
 
   setTitleKey(key) {

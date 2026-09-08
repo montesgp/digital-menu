@@ -14,7 +14,8 @@
       "sectionObservations": "",
       "price": "15 USD",
       "size": "",
-      "ingredients": "harina de mandioca, azucar, jamon y queso, ajo y aceite de oliva"
+      "ingredients": "harina de mandioca, azucar, jamon y queso, ajo y aceite de oliva",
+      "featuredRank": 1
     },
     {
       "name": "Tortilla",
@@ -30,7 +31,8 @@
       "sectionObservations": "",
       "price": "15 USD",
       "size": "",
-      "ingredients": "Cebolla, huevo, aceite de girasol, miel"
+      "ingredients": "Cebolla, huevo, aceite de girasol, miel",
+      "featuredRank": 2
     },
     {
       "name": "Bife de chorizo",
@@ -46,7 +48,8 @@
       "sectionObservations": "Todos los platos salen con papas fritas o ensalada",
       "price": "20 USD",
       "size": "",
-      "ingredients": "Carne, aceite de oliva, chimichurri"
+      "ingredients": "Carne, aceite de oliva, chimichurri",
+      "featuredRank": 3
     },
     {
       "name": "Ruttini Reserva",
@@ -62,7 +65,8 @@
       "sectionObservations": "Descorche 18 USD",
       "price": "15 USD",
       "size": "",
-      "ingredients": "uva uva, uva y roble, y ciruela y ciruela, y pera nocturna"
+      "ingredients": "uva uva, uva y roble, y ciruela y ciruela, y pera nocturna",
+      "featuredRank": 4
     },
     {
       "name": "Coca-Cola",
@@ -78,7 +82,8 @@
       "sectionObservations": "",
       "price": "15 USD",
       "size": "",
-      "ingredients": ""
+      "ingredients": "",
+      "featuredRank": 5
     },
     {
       "name": "Cerveza Patagonica",
@@ -94,7 +99,8 @@
       "sectionObservations": "",
       "price": "15 USD",
       "size": "",
-      "ingredients": "lupulo lupulo y maltaaaaa"
+      "ingredients": "lupulo lupulo y maltaaaaa",
+      "featuredRank": 8
     },
     {
       "name": "Pizza de Anana",
@@ -110,7 +116,8 @@
       "sectionObservations": "Todos los platos salen con papas fritas o ensalada",
       "price": "20 USD",
       "size": "Big",
-      "ingredients": "Harina 000, Agua, Anana, Oregano, Aceite de Oliva, Miel"
+      "ingredients": "Harina 000, Agua, Anana, Oregano, Aceite de Oliva, Miel",
+      "featuredRank": 6
     },
     {
       "name": "BQ Burger",
@@ -126,7 +133,8 @@
       "sectionObservations": "Todas las hamburguesas salen con frita",
       "price": "28 USD",
       "size": "Double",
-      "ingredients": "500g de carne picada"
+      "ingredients": "500g de carne picada",
+      "featuredRank": 7
     },
     {
       "name": "Carpaccio de Salmón",
@@ -142,7 +150,8 @@
       "sectionObservations": "",
       "price": "22 USD",
       "size": "",
-      "ingredients": "Salmón, alcaparras, aceite de trufa, limón, rúcula"
+      "ingredients": "Salmón, alcaparras, aceite de trufa, limón, rúcula",
+      "featuredRank": 11
     },
     {
       "name": "Risotto de Hongos",
@@ -173,7 +182,8 @@
       "sectionObservations": "",
       "price": "18 USD",
       "size": "",
-      "ingredients": "Corvina fresca, jugo de limón, ají limo, cebolla morada, cilantro, maíz cancha, boniato"
+      "ingredients": "Corvina fresca, jugo de limón, ají limo, cebolla morada, cilantro, maíz cancha, boniato",
+      "featuredRank": 12
     },
     {
       "name": "Pulpo a la Gallega",
@@ -204,7 +214,8 @@
       "sectionObservations": "",
       "price": "26 USD",
       "size": "",
-      "ingredients": "Atún rojo, aguacate, soja, sésamo, cebolleta, aceite de oliva"
+      "ingredients": "Atún rojo, aguacate, soja, sésamo, cebolleta, aceite de oliva",
+      "featuredRank": 13
     },
     {
       "name": "Ensalada César",
@@ -220,7 +231,8 @@
       "sectionObservations": "",
       "price": "16 USD",
       "size": "",
-      "ingredients": "Lechuga romana, pollo, pan, queso parmesano, anchoas, ajo, mostaza, aceite de oliva"
+      "ingredients": "Lechuga romana, pollo, pan, queso parmesano, anchoas, ajo, mostaza, aceite de oliva",
+      "featuredRank": 14
     },
     {
       "name": "Bowl Vegano",
@@ -251,7 +263,8 @@
       "sectionObservations": "",
       "price": "12 USD",
       "size": "",
-      "ingredients": "Queso mascarpone, huevos, azúcar, café, licor marsala, bizcochos savoiardi, cacao en polvo"
+      "ingredients": "Queso mascarpone, huevos, azúcar, café, licor marsala, bizcochos savoiardi, cacao en polvo",
+      "featuredRank": 16
     },
     {
       "name": "Coulant de Chocolate",
@@ -267,7 +280,8 @@
       "sectionObservations": "",
       "price": "14 USD",
       "size": "",
-      "ingredients": "Chocolate negro, mantequilla, huevos, harina, azúcar, helado de vainilla"
+      "ingredients": "Chocolate negro, mantequilla, huevos, harina, azúcar, helado de vainilla",
+      "featuredRank": 17
     },
     {
       "name": "Crema Catalana",
@@ -283,7 +297,8 @@
       "sectionObservations": "",
       "price": "10 USD",
       "size": "",
-      "ingredients": "Leche, nata, huevos, azúcar, canela, piel de limón, azúcar moreno"
+      "ingredients": "Leche, nata, huevos, azúcar, canela, piel de limón, azúcar moreno",
+      "featuredRank": 18
     },
     {
       "name": "Martini Dry",
@@ -299,7 +314,8 @@
       "sectionObservations": "",
       "price": "16 USD",
       "size": "",
-      "ingredients": "Ginebra premium, vermut seco, aceituna verde"
+      "ingredients": "Ginebra premium, vermut seco, aceituna verde",
+      "featuredRank": 9
     },
     {
       "name": "Negroni",
@@ -315,7 +331,8 @@
       "sectionObservations": "",
       "price": "18 USD",
       "size": "",
-      "ingredients": "Ginebra, vermut rojo, Campari, naranja"
+      "ingredients": "Ginebra, vermut rojo, Campari, naranja",
+      "featuredRank": 10
     },
     {
       "name": "Limonada Casera",
@@ -451,7 +468,8 @@
       "sectionObservations": "",
       "price": "12 USD",
       "size": "",
-      "ingredients": "Queso crema, nata, azúcar, huevos, galletas, mantequilla, frutos rojos"
+      "ingredients": "Queso crema, nata, azúcar, huevos, galletas, mantequilla, frutos rojos",
+      "featuredRank": 19
     },
     {
       "name": "Agua Mineral",
@@ -512,7 +530,8 @@
       "sectionObservations": "",
       "price": "10 USD",
       "size": "",
-      "ingredients": "Chocolate negro, huevos, nata, azúcar, avellanas caramelizadas"
+      "ingredients": "Chocolate negro, huevos, nata, azúcar, avellanas caramelizadas",
+      "featuredRank": 20
     },
     {
       "name": "Hummus de Garbanzo",
@@ -527,7 +546,8 @@
       "sectionObservations": "",
       "price": "12 USD",
       "size": "",
-      "ingredients": "Garbanzos, tahini, limón, ajo, aceite de oliva, perejil"
+      "ingredients": "Garbanzos, tahini, limón, ajo, aceite de oliva, perejil",
+      "featuredRank": 15
     },
     {
       "name": "Bruschetta sin gluten",
