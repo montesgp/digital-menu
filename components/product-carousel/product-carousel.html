@@ -1,4 +1,28 @@
 <section class="carousel-container" aria-labelledby="carousel-title">
-  <h2 id="carousel-title" class="carousel-title"></h2>
-  <div class="featured-grid" role="list"></div>
+  <div class="carousel-header">
+    <h2 id="carousel-title" class="carousel-title"></h2>
+    <div class="carousel-controls" role="group" aria-label="Carousel controls">
+      <button
+        class="carousel-control"
+        type="button"
+        data-direction="previous"
+        aria-controls="featured-product-viewport"
+        aria-label="Previous suggested products"
+      >
+        <span aria-hidden="true">←</span>
+      </button>
+      <button
+        class="carousel-control"
+        type="button"
+        data-direction="next"
+        aria-controls="featured-product-viewport"
+        aria-label="Next suggested products"
+      >
+        <span aria-hidden="true">→</span>
+      </button>
+    </div>
+  </div>
+  <div id="featured-product-viewport" class="carousel-viewport" tabindex="0">
+    <div class="carousel-track" role="list"></div>
+  </div>
 </section>

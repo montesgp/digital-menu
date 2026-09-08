@@ -1,15 +1,17 @@
 :host {
     display: block;
     width: 100%;
+    --menu-inline-gutter: clamp(1rem, 5vw, 2rem);
 }
 
 .service-title {
+    margin: 1.5rem var(--menu-inline-gutter) 0;
     text-align: center;
 }
 
 .menu-sections {
-    padding: 2rem;
     min-height: 600px;
+    padding: 2rem var(--menu-inline-gutter);
 }
 
 .section-title {
