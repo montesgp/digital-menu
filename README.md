@@ -240,6 +240,24 @@ The project is a static site and is deployed to **GitHub Pages** directly from t
 
 If you serve the site under a subpath, keep the production base URL in sync with that path.
 
+### Release flow (gitflow)
+
+This repository uses a lightweight gitflow:
+
+- `main` is the production branch and only receives **promotion pull requests** from `dev`.
+- `dev` is the integration branch. Feature branches are cut from `dev` and merged back into it.
+- Promotions are merged with **squash** (so `main` keeps a linear history).
+
+**Keep the merge base fresh.** Because squash merges create new commits instead of shared history, a stale merge base makes the next promotion show phantom conflicts in files both branches changed. After every promotion, merge `main` back into `dev`:
+
+```bash
+git checkout dev
+git merge main        # clean when dev is up to date
+git push
+```
+
+This keeps `merge-base(dev, main) == main` so the next promotion is a clean diff.
+
 ## Contributing
 
 Please read [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution workflow (branching model, PR requirements, and commit conventions) before opening an issue or a pull request. See also [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) and [SECURITY.md](SECURITY.md).
@@ -247,3 +265,9 @@ Please read [CONTRIBUTING.md](CONTRIBUTING.md) for the contribution workflow (br
 ## License
 
 This project is licensed under the [MIT License](LICENSE). Copyright (c) 2025 Patricio Montes.
+
+## Scan me
+
+![QR – live demo](assets/qr/business-card.png)
+
+Scan this code with your phone camera to open the live demo. Print it on tables, cards, and flyers for instant access.

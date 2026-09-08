@@ -6,63 +6,84 @@ class ProductCarousel extends BaseComponent {
     super();
     this.products = [];
     this.titleKey = null;
+    this.placeholderImage = new URL(
+      "../../assets/products/placeholder.jpg",
+      import.meta.url
+    ).href;
   }
 
   async onConnected() {
     await this.loadTemplate(import.meta.url);
-
-    // Oculta el contenedor inicialmente hasta que tenga productos
-    const wrapper = this.shadowRoot.querySelector(".carousel-container");
-    if (wrapper) {
-      wrapper.style.display = "none";
-    }
-
     this.updateTitle();
+    this.renderCarousel();
   }
 
   setProducts(products) {
-    this.products = products;
+    this.products = Array.isArray(products) ? products : [];
     this.renderCarousel();
   }
 
   renderCarousel() {
-    const container = this.shadowRoot.querySelector(".carousel-inner");
+    const container = this.shadowRoot.querySelector(".featured-grid");
     const wrapper = this.shadowRoot.querySelector(".carousel-container");
-
     if (!container || !wrapper) return;
 
-    if (!this.products || !this.products.length) {
-      wrapper.style.display = "none"; // Oculta completamente
+    if (!this.products.length) {
+      wrapper.hidden = true;
       return;
     }
 
-    wrapper.style.display = ""; // Muestra si hay productos
-    container.innerHTML = "";
+    wrapper.hidden = false;
+    container.replaceChildren();
 
     this.products.forEach((product) => {
-      const card = document.createElement("div");
+      const card = document.createElement("article");
       card.className = "carousel-card";
-      card.innerHTML = `
-      <img class="product-image" src="${
-        product.image || "/assets/img/placeholder-dessert.jpg"
-      }" alt="${product.name}" />
-      <div class="product-info">
-        <div class="product-name">${product.name}</div>
-        ${
-          product.description
-            ? `<div class="product-description">${product.description}</div>`
-            : ""
+      card.tabIndex = 0;
+      card.setAttribute("role", "listitem");
+
+      const image = document.createElement("img");
+      image.className = "product-image";
+      image.src = product.image || this.placeholderImage;
+      image.alt = product.name || "Featured product";
+      image.loading = "lazy";
+      image.decoding = "async";
+      image.addEventListener("error", () => {
+        if (image.src !== this.placeholderImage) {
+          image.src = this.placeholderImage;
         }
-        ${
-          product.ingredients
-            ? `<div class="product-ingredients">Ingredientes: ${product.ingredients}</div>`
-            : ""
-        }
-        <div class="product-price-size">${product.price}${
-        product.size ? " - " + product.size : ""
-      }</div>
-      </div>
-    `;
+      }, { once: true });
+
+      const info = document.createElement("div");
+      info.className = "product-info";
+
+      const name = document.createElement("h3");
+      name.className = "product-name";
+      name.textContent = product.name || "Featured product";
+      info.appendChild(name);
+
+      if (product.description) {
+        const description = document.createElement("p");
+        description.className = "product-description";
+        description.textContent = product.description;
+        info.appendChild(description);
+      }
+
+      if (product.ingredients) {
+        const ingredients = document.createElement("p");
+        ingredients.className = "product-ingredients";
+        ingredients.textContent = product.ingredients;
+        info.appendChild(ingredients);
+      }
+
+      const price = document.createElement("p");
+      price.className = "product-price-size";
+      price.textContent = `${product.price || ""}${
+        product.size ? ` - ${product.size}` : ""
+      }`;
+      info.appendChild(price);
+
+      card.append(image, info);
       container.appendChild(card);
     });
   }
@@ -82,7 +103,7 @@ class ProductCarousel extends BaseComponent {
     try {
       carouselTitle.textContent = TranslationService.translate(key);
     } catch (e) {
-      console.warn("Error traduciendo el título del carrusel:", e);
+      console.warn("Error translating carousel title:", e);
       carouselTitle.textContent = key;
     }
   }

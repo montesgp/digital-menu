@@ -1,6 +1,7 @@
 import { storeConfig } from "../../../config/config.js";
 import { BaseComponent } from "../../base/base-component.js";
 import "../../../components/category-slider/category-slider.js";
+import "../../../components/product-carousel/product-carousel.js";
 
 class DrinksService extends BaseComponent {
   constructor() {

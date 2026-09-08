@@ -10,5 +10,8 @@
     "header.cover.home-btn": "#PTheader.cover.home-btn",
     "carousel.default.title": "#PTcarousel.default.title",
     "carousel.desserts.title": "#PTcarousel.desserts.title",
-    "carousel.full_service.title": "#PTcarousel.full_service.title"
+    "carousel.full_service.title": "#PTcarousel.full_service.title",
+    "carousel.starters.title": "Entradas em destaque",
+    "carousel.main_courses.title": "Pratos principais em destaque",
+    "carousel.drinks.title": "Bebidas em destaque"
 }
