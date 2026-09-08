@@ -1,5 +1,9 @@
+:host {
+    display: block;
+}
+
 .category-slider {
-    margin: 1.5rem 0;
+    margin: 1.5rem var(--menu-inline-gutter, clamp(1rem, 5vw, 2rem));
     border-bottom: 2px solid #ccc;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
@@ -11,7 +15,7 @@
 .my-slider {
     display: flex;
     gap: 0.5rem;
-    padding: 0 1rem;
+    padding: 0;
 }
 
 .slide-item {
@@ -34,16 +38,13 @@
 
 .slide-item.active {
     border-bottom: 3px solid #3f51b5;
-    /* Material blue */
     color: #3f51b5;
 }
 
-/* Opcional: animación suave entre tabs */
 .my-slider {
     scroll-behavior: smooth;
 }
 
-/* Mobile: se mantiene en scroll horizontal */
 @media (max-width: 768px) {
     .my-slider {
         overflow-x: auto;

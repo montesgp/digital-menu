@@ -10,12 +10,20 @@ class ProductCarousel extends BaseComponent {
       "../../assets/products/placeholder.jpg",
       import.meta.url
     ).href;
+    this.handleScroll = this.updateControls.bind(this);
+    this.handleControlClick = this.handleControlClick.bind(this);
+    this.handleResize = this.handleResize.bind(this);
   }
 
   async onConnected() {
     await this.loadTemplate(import.meta.url);
+    this.setupControls();
     this.updateTitle();
     this.renderCarousel();
+  }
+
+  disconnectedCallback() {
+    this.resizeObserver?.disconnect();
   }
 
   setProducts(products) {
@@ -23,13 +31,67 @@ class ProductCarousel extends BaseComponent {
     this.renderCarousel();
   }
 
+  setupControls() {
+    const viewport = this.shadowRoot.querySelector(".carousel-viewport");
+    const controls = this.shadowRoot.querySelectorAll(".carousel-control");
+    if (!viewport) return;
+
+    viewport.addEventListener("scroll", this.handleScroll, { passive: true });
+    controls.forEach((control) => {
+      control.addEventListener("click", this.handleControlClick);
+    });
+
+    this.resizeObserver = new ResizeObserver(this.handleResize);
+    this.resizeObserver.observe(viewport);
+  }
+
+  handleResize() {
+    const viewport = this.shadowRoot.querySelector(".carousel-viewport");
+    if (!viewport) return;
+
+    const maxScroll = Math.max(0, viewport.scrollWidth - viewport.clientWidth);
+    if (viewport.scrollLeft > maxScroll) {
+      viewport.scrollTo({ left: maxScroll, behavior: "auto" });
+    }
+    this.updateControls();
+  }
+
+  handleControlClick(event) {
+    const viewport = this.shadowRoot.querySelector(".carousel-viewport");
+    if (!viewport) return;
+
+    const direction = event.currentTarget.dataset.direction === "previous" ? -1 : 1;
+    const reducedMotion = window.matchMedia(
+      "(prefers-reduced-motion: reduce)"
+    ).matches;
+    viewport.scrollBy({
+      left: direction * Math.max(viewport.clientWidth * 0.85, 1),
+      behavior: reducedMotion ? "auto" : "smooth",
+    });
+  }
+
+  updateControls() {
+    const viewport = this.shadowRoot.querySelector(".carousel-viewport");
+    const controls = this.shadowRoot.querySelector(".carousel-controls");
+    const previous = this.shadowRoot.querySelector('[data-direction="previous"]');
+    const next = this.shadowRoot.querySelector('[data-direction="next"]');
+    if (!viewport || !controls || !previous || !next) return;
+
+    const maxScroll = Math.max(0, viewport.scrollWidth - viewport.clientWidth);
+    const hasOverflow = maxScroll > 1;
+    controls.hidden = !hasOverflow;
+    previous.disabled = !hasOverflow || viewport.scrollLeft <= 1;
+    next.disabled = !hasOverflow || viewport.scrollLeft >= maxScroll - 1;
+  }
+
   renderCarousel() {
-    const container = this.shadowRoot.querySelector(".featured-grid");
+    const container = this.shadowRoot.querySelector(".carousel-track");
     const wrapper = this.shadowRoot.querySelector(".carousel-container");
     if (!container || !wrapper) return;
 
     if (!this.products.length) {
       wrapper.hidden = true;
+      this.updateControls();
       return;
     }
 
@@ -48,11 +110,15 @@ class ProductCarousel extends BaseComponent {
       image.alt = product.name || "Featured product";
       image.loading = "lazy";
       image.decoding = "async";
-      image.addEventListener("error", () => {
-        if (image.src !== this.placeholderImage) {
-          image.src = this.placeholderImage;
-        }
-      }, { once: true });
+      image.addEventListener(
+        "error",
+        () => {
+          if (image.src !== this.placeholderImage) {
+            image.src = this.placeholderImage;
+          }
+        },
+        { once: true }
+      );
 
       const info = document.createElement("div");
       info.className = "product-info";
@@ -86,6 +152,8 @@ class ProductCarousel extends BaseComponent {
       card.append(image, info);
       container.appendChild(card);
     });
+
+    requestAnimationFrame(() => this.handleResize());
   }
 
   setTitleKey(key) {

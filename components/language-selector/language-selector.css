@@ -11,6 +11,7 @@
 }
 
 .selected-language {
+    color: #1d3557;
     display: flex;
     align-items: center;
     cursor: pointer;
@@ -27,6 +28,7 @@
 }
 
 .language-dropdown {
+    color: #1d3557;
     position: absolute;
     top: 100%;
     right: 0;
