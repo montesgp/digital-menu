@@ -1,3 +1,5 @@
+import TranslationService from "../../assets/i18n/translationService.js";
+
 const template = document.createElement('template');
 
 Promise.all([
@@ -29,6 +31,8 @@ class ServiceMenu extends HTMLElement {
     this.menuExpanded = false;
     this.isMobile = window.matchMedia("(max-width: 600px)").matches;
     this.handleDocumentClick = this.handleDocumentClick.bind(this);
+    this.handleResize = this.handleResize.bind(this);
+    this.handleTranslationsReady = this.handleTranslationsReady.bind(this);
   }
 
   connectedCallback() {
@@ -39,8 +43,10 @@ class ServiceMenu extends HTMLElement {
 
     this.shadowRoot.appendChild(template.content.cloneNode(true));
     this.setupEventListeners();
-    window.addEventListener('resize', this.handleResize.bind(this));
+    this.handleTranslationsReady();
+    window.addEventListener('resize', this.handleResize);
     document.addEventListener('click', this.handleDocumentClick);
+    document.addEventListener('translationsReady', this.handleTranslationsReady);
   }
 
   setupEventListeners() {
@@ -80,6 +86,10 @@ class ServiceMenu extends HTMLElement {
     });
   }
 
+  handleTranslationsReady() {
+    TranslationService.translatePage(this.shadowRoot);
+  }
+
   handleDocumentClick(e) {
     if (!this.isMobile || !this.menuExpanded) return;
 
@@ -113,6 +123,7 @@ class ServiceMenu extends HTMLElement {
   disconnectedCallback() {
     window.removeEventListener('resize', this.handleResize);
     document.removeEventListener('click', this.handleDocumentClick);
+    document.removeEventListener('translationsReady', this.handleTranslationsReady);
   }
 }
 

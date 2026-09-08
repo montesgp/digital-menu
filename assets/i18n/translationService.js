@@ -3,22 +3,42 @@ import { storeConfig } from "../../config/config.js";
 const TranslationService = (() => {
   let currentLang = localStorage.getItem("selectedLanguage") || "en";
   let translations = {};
+  let latestRequest = 0;
 
   const loadTranslations = async (lang = currentLang) => {
+    const requestId = ++latestRequest;
+    const previousLang = currentLang;
+    localStorage.setItem("selectedLanguage", lang);
+
     try {
       const res = await fetch(
         `${storeConfig.site.url}/assets/i18n/${lang}.json`
       );
-      translations = await res.json();
+      if (!res.ok) {
+        throw new Error(`Unable to load translations: ${res.status}`);
+      }
+
+      const nextTranslations = await res.json();
+
+      // A later choice wins, even if an earlier request finishes last.
+      if (requestId !== latestRequest) {
+        return false;
+      }
+
+      translations = nextTranslations;
       currentLang = lang;
-      localStorage.setItem("selectedLanguage", lang);
       document.dispatchEvent(
         new CustomEvent("translationsReady", {
           detail: { lang, translations },
         })
       );
+      return true;
     } catch (err) {
+      if (requestId === latestRequest) {
+        localStorage.setItem("selectedLanguage", previousLang);
+      }
       console.error("Error cargando traducciones:", err);
+      return false;
     }
   };
 
@@ -46,10 +66,15 @@ const TranslationService = (() => {
   };
 
   const changeLanguage = async (lang) => {
-    if (lang !== currentLang) {
-      await loadTranslations(lang);
+    if (lang === currentLang && Object.keys(translations).length) {
+      return true;
+    }
+
+    const applied = await loadTranslations(lang);
+    if (applied) {
       translatePage();
     }
+    return applied;
   };
 
   return {

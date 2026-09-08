@@ -6,46 +6,36 @@ class LanguageSelector extends HTMLElement {
   constructor() {
     super();
 
-    // Definición de idiomas disponibles (si se necesitan más, agregar aquí)
     this.languages = {
       en: "English",
       es: "Español",
-      pt: "Portugues",
+      pt: "Português",
     };
-
-    // Obtener la ruta base para los recursos
     this.basePath = this._getBasePath();
-
-    // Crear shadow DOM
     this.attachShadow({ mode: "open" });
-
-    // Estado inicial
     this.isOpen = false;
+    this.handleTranslationsReady = this.handleTranslationsReady.bind(this);
   }
 
   connectedCallback() {
-    // Cargar el template HTML y el CSS
+    this.currentLang = this._getPersistedLanguage();
     this._loadResources();
+    document.addEventListener("translationsReady", this.handleTranslationsReady);
+  }
 
-    // Establecer idioma actual (desde localStorage o por defecto)
-    this.currentLang =
-      localStorage.getItem("selectedLanguage") || storeConfig.default.language;
-
-    // Si ya está todo traducido antes de que se conecte el componente
-    if (window.translationReady) {
-      this._updateSelectedLanguage(this.currentLang);
-    }
-
-    // En caso de que se traduzca después de montar
-    document.addEventListener("translationsReady", () => {
-      this._updateSelectedLanguage(
-        localStorage.getItem("selectedLanguage") || storeConfig.default.language
-      );
-    });
+  disconnectedCallback() {
+    document.removeEventListener("translationsReady", this.handleTranslationsReady);
   }
 
   _getBasePath() {
     return `${storeConfig.site.url}/components/language-selector/`;
+  }
+
+  _getPersistedLanguage() {
+    const lang = localStorage.getItem("selectedLanguage") ||
+      TranslationService.getCurrentLang() ||
+      storeConfig.default.language;
+    return this.languages[lang] ? lang : storeConfig.default.language;
   }
 
   _loadResources() {
@@ -63,59 +53,48 @@ class LanguageSelector extends HTMLElement {
       }),
     ])
       .then(([cssText, html]) => {
-        const style = document.createElement("style");
-        style.textContent = cssText;
-        this.shadowRoot.appendChild(style);
-
-        this.shadowRoot.innerHTML += html;
-
+        this.shadowRoot.innerHTML = `<style>${cssText}</style>${html}`;
         this._updateFlagPaths();
-        this._renderLanguageOptions();
+        this._setCurrentLanguage(this._getPersistedLanguage());
         this._setupEventListeners();
-        this._updateSelectedLanguage(this.currentLang);
       })
       .catch((error) => {
         console.error("Error cargando recursos:", error);
-        this._createBasicStructure(); // fallback si falla
+        this._createBasicStructure();
       });
   }
 
   _createBasicStructure() {
-    // Estructura básica del componente como fallback
+    this.shadowRoot.innerHTML = "";
+
     const container = document.createElement("div");
     container.className = "language-selector";
 
-    const selectedLang = document.createElement("div");
+    const selectedLang = document.createElement("button");
     selectedLang.className = "selected-language";
+    selectedLang.type = "button";
+    selectedLang.setAttribute("aria-haspopup", "listbox");
+    selectedLang.setAttribute("aria-expanded", "false");
 
     const selectedImg = document.createElement("img");
     selectedImg.id = "selected-lang-flag";
-    selectedImg.src = `${this.basePath}flags/${this.currentLang || "en"}.svg`;
-    selectedImg.alt = this.languages[this.currentLang] || "English";
-
     const selectedText = document.createElement("span");
     selectedText.id = "selected-lang-text";
-    selectedText.textContent = this.languages[this.currentLang] || "English";
-
-    selectedLang.appendChild(selectedImg);
-    selectedLang.appendChild(selectedText);
+    selectedLang.append(selectedImg, selectedText);
 
     const dropdown = document.createElement("div");
     dropdown.className = "language-dropdown";
-
-    this._renderLanguageOptions();
-
     const langList = document.createElement("ul");
+    langList.setAttribute("role", "listbox");
     dropdown.appendChild(langList);
-    container.appendChild(selectedLang);
-    container.appendChild(dropdown);
 
+    container.append(selectedLang, dropdown);
     this.shadowRoot.appendChild(container);
+    this._setCurrentLanguage(this._getPersistedLanguage());
     this._setupEventListeners();
   }
 
   _updateFlagPaths() {
-    // Actualizar las rutas de las imágenes de banderas en el HTML cargado
     const flagImages = this.shadowRoot.querySelectorAll(
       ".language-dropdown li[data-lang] img"
     );
@@ -126,45 +105,31 @@ class LanguageSelector extends HTMLElement {
   }
 
   _setupEventListeners() {
-    // Configurar evento de clic para abrir/cerrar el dropdown
     const selectedLang = this.shadowRoot.querySelector(".selected-language");
     if (selectedLang) {
       selectedLang.addEventListener("click", () => this._toggleDropdown());
     }
 
-    // Cerrar dropdown cuando se hace clic fuera
-    document.addEventListener("click", (e) => {
-      if (!this.contains(e.target) && this.isOpen) {
-        this._closeDropdown();
-      }
-    });
+  }
 
-    // Configurar eventos para los elementos de idioma
-    const langItems = this.shadowRoot.querySelectorAll(
-      ".language-dropdown li[data-lang]"
-    );
-    langItems.forEach((item) => {
-      item.addEventListener("click", () => {
-        const lang = item.dataset.lang;
-        this._selectLanguage(lang);
-      });
-    });
+  handleTranslationsReady(event) {
+    const lang = event.detail?.lang || this._getPersistedLanguage();
+    this._setCurrentLanguage(lang);
   }
 
   _toggleDropdown() {
     const dropdown = this.shadowRoot.querySelector(".language-dropdown");
     const container = this.shadowRoot.querySelector(".language-selector");
+    const selected = this.shadowRoot.querySelector(".selected-language");
     if (!dropdown || !container) return;
 
     this.isOpen = !this.isOpen;
+    dropdown.classList.toggle("open", this.isOpen);
+    selected?.setAttribute("aria-expanded", String(this.isOpen));
 
-    if (this.isOpen) {
-      dropdown.classList.add("open");
-      if (DeviceService.isMobile()) {
-        container.classList.add("mobile-expanded");
-      }
+    if (this.isOpen && DeviceService.isMobile()) {
+      container.classList.add("mobile-expanded");
     } else {
-      dropdown.classList.remove("open");
       container.classList.remove("mobile-expanded");
     }
   }
@@ -172,35 +137,47 @@ class LanguageSelector extends HTMLElement {
   _closeDropdown() {
     const dropdown = this.shadowRoot.querySelector(".language-dropdown");
     const container = this.shadowRoot.querySelector(".language-selector");
+    const selected = this.shadowRoot.querySelector(".selected-language");
     if (!dropdown || !container) return;
 
     dropdown.classList.remove("open");
     container.classList.remove("mobile-expanded");
+    selected?.setAttribute("aria-expanded", "false");
     this.isOpen = false;
   }
 
-  _selectLanguage(lang) {
-    if (this.currentLang !== lang) {
-      this.currentLang = lang;
-      localStorage.setItem("selectedLanguage", lang);
-      this._updateSelectedLanguage(lang);
-      this._renderLanguageOptions();
-
-      TranslationService.loadTranslations(lang);
+  async _selectLanguage(lang) {
+    if (!this.languages[lang] || this.currentLang === lang) {
+      this._closeDropdown();
+      return;
     }
 
+    this._setCurrentLanguage(lang);
+    localStorage.setItem("selectedLanguage", lang);
     this._closeDropdown();
+
+    const applied = await TranslationService.loadTranslations(lang);
+    const persistedLanguage = this._getPersistedLanguage();
+
+    // A failed latest request restores the previously applied language. A stale
+    // request leaves the later user choice visible until it finishes loading.
+    if (!applied && persistedLanguage !== lang) {
+      this._setCurrentLanguage(persistedLanguage);
+    }
+  }
+
+  _setCurrentLanguage(lang) {
+    this.currentLang = this.languages[lang] ? lang : storeConfig.default.language;
+    this._updateSelectedLanguage(this.currentLang);
+    this._renderLanguageOptions();
   }
 
   _updateSelectedLanguage(lang) {
     const selectedImg = this.shadowRoot.querySelector("#selected-lang-flag");
     const selectedText = this.shadowRoot.querySelector("#selected-lang-text");
-
     if (!selectedImg || !selectedText) return;
 
-    // Buscar el nombre del idioma en los elementos existentes o en la definición de idiomas
     const langName = this.languages[lang] || lang;
-
     selectedImg.src = `${this.basePath}flags/${lang}.svg`;
     selectedImg.alt = langName;
     selectedText.textContent = langName;
@@ -210,24 +187,22 @@ class LanguageSelector extends HTMLElement {
     const langList = this.shadowRoot.querySelector(".language-dropdown ul");
     if (!langList) return;
 
-    langList.innerHTML = ""; // limpiar lista
-
+    langList.innerHTML = "";
     Object.entries(this.languages).forEach(([lang, name]) => {
-      if (lang === this.currentLang) return; // excluir el idioma seleccionado
+      if (lang === this.currentLang) return;
 
       const li = document.createElement("li");
       li.dataset.lang = lang;
+      li.setAttribute("role", "option");
+      li.setAttribute("aria-selected", "false");
 
       const img = document.createElement("img");
       img.src = `${this.basePath}flags/${lang}.svg`;
-      img.alt = name;
+      img.alt = "";
 
       const span = document.createElement("span");
       span.textContent = name;
-
-      li.appendChild(img);
-      li.appendChild(span);
-
+      li.append(img, span);
       li.addEventListener("click", () => this._selectLanguage(lang));
       langList.appendChild(li);
     });
